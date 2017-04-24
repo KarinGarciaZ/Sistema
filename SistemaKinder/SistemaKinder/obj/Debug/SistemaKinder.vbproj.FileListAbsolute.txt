@@ -91,3 +91,7 @@ C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPrestam
 C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmTutores.resources
 C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.Resources.resources
 C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbproj.GenerateResource.Cache
+C:\Users\elektramovil\Documents\GitHub\SistemaControlKinder\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe.config
+C:\Users\elektramovil\Documents\GitHub\SistemaControlKinder\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.exe
+C:\Users\elektramovil\Documents\GitHub\SistemaControlKinder\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.xml
+C:\Users\elektramovil\Documents\GitHub\SistemaControlKinder\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.pdb
