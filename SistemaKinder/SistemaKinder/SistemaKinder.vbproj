@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB1E35DA-436C-42F1-99EA-60A0C3D5F81E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaKinder.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaKinder</RootNamespace>
+    <AssemblyName>SistemaKinder</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaKinder.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaKinder.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bdKinderDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bdKinderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsAlumnos.Designer.vb">
+      <DependentUpon>frmConsAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsDiscapacidades.Designer.vb">
+      <DependentUpon>frmConsDiscapacidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsDiscapacidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsEmpleados.Designer.vb">
+      <DependentUpon>frmConsEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsEntradaMaterial.Designer.vb">
+      <DependentUpon>frmConsEntradaMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsEntradaMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsEscuelas.Designer.vb">
+      <DependentUpon>frmConsEscuelas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsEscuelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsGrupos.Designer.vb">
+      <DependentUpon>frmConsGrupos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsGrupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsMaterial.Designer.vb">
+      <DependentUpon>frmConsMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsPrestamo.Designer.vb">
+      <DependentUpon>frmConsPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsTutores.Designer.vb">
+      <DependentUpon>frmConsTutores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsTutores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntradaMaterial.Designer.vb">
+      <DependentUpon>frmEntradaMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntradaMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnos.Designer.vb">
+      <DependentUpon>frmAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiscapacidades.Designer.vb">
+      <DependentUpon>frmDiscapacidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscapacidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpleados.Designer.vb">
+      <DependentUpon>frmEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEscuelas.Designer.vb">
+      <DependentUpon>frmEscuelas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEscuelas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGastos.Designer.vb">
+      <DependentUpon>frmGastos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGastos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrupos.Designer.vb">
+      <DependentUpon>frmGrupos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMateriales.Designer.vb">
+      <DependentUpon>frmMateriales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMateriales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPagos.Designer.vb">
+      <DependentUpon>frmPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamoMaterial.Designer.vb">
+      <DependentUpon>frmPrestamoMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamoMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTutores.Designer.vb">
+      <DependentUpon>frmTutores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTutores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmConsAlumnos.resx">
+      <DependentUpon>frmConsAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsDiscapacidades.resx">
+      <DependentUpon>frmConsDiscapacidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsEmpleados.resx">
+      <DependentUpon>frmConsEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsEntradaMaterial.resx">
+      <DependentUpon>frmConsEntradaMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsEscuelas.resx">
+      <DependentUpon>frmConsEscuelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsGrupos.resx">
+      <DependentUpon>frmConsGrupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsMaterial.resx">
+      <DependentUpon>frmConsMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsPrestamo.resx">
+      <DependentUpon>frmConsPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsTutores.resx">
+      <DependentUpon>frmConsTutores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntradaMaterial.resx">
+      <DependentUpon>frmEntradaMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnos.resx">
+      <DependentUpon>frmAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscapacidades.resx">
+      <DependentUpon>frmDiscapacidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpleados.resx">
+      <DependentUpon>frmEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEscuelas.resx">
+      <DependentUpon>frmEscuelas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGastos.resx">
+      <DependentUpon>frmGastos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrupos.resx">
+      <DependentUpon>frmGrupos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMateriales.resx">
+      <DependentUpon>frmMateriales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPagos.resx">
+      <DependentUpon>frmPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamoMaterial.resx">
+      <DependentUpon>frmPrestamoMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTutores.resx">
+      <DependentUpon>frmTutores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bdKinderDataSet.xsc">
+      <DependentUpon>bdKinderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bdKinderDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bdKinderDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bdKinderDataSet.xss">
+      <DependentUpon>bdKinderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo3.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-295210_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped-cropped-nic3b1os-lindos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoprofesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index00e0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\164962.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol-help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-informacion-general-blanco-azul_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_37127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Commissies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03-icono-empleados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parents-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botones-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-634903_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventario3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receiptofcash_cash_money_4581.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_icon-icons.com_51090.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

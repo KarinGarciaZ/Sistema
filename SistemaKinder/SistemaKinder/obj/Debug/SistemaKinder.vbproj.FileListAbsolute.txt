@@ -1,0 +1,93 @@
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe.config
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.pdb
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.xml
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbprojResolveAssemblyReference.cache
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmMenu.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmAlumnos.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmDiscapacidades.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEmpleados.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEscuelas.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmGrupos.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmMateriales.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmTutores.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.Resources.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbproj.GenerateResource.Cache
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.exe
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.xml
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.pdb
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPrestamoMaterial.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEntradaMaterial.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmGastos.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPagos.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsAlumnos.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsDiscapacidades.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEmpleados.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEscuelas.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsGrupos.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsMaterial.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsTutores.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEntradaMaterial.resources
+C:\Users\dalia\Desktop\6TO SEMESTRE\calidad de los sistemas\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsPrestamo.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe.config
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.exe
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.xml
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.pdb
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.pdb
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.xml
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbprojResolveAssemblyReference.cache
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsAlumnos.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsDiscapacidades.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEmpleados.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEntradaMaterial.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEscuelas.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsGrupos.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsMaterial.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsPrestamo.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsTutores.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEntradaMaterial.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmMenu.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmAlumnos.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmDiscapacidades.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEmpleados.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEscuelas.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmGastos.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmGrupos.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmMateriales.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPagos.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPrestamoMaterial.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmTutores.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.Resources.resources
+C:\Users\diego_000\Desktop\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbproj.GenerateResource.Cache
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe.config
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.exe
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.xml
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.pdb
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.exe
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.pdb
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\bin\Debug\SistemaKinder.xml
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbprojResolveAssemblyReference.cache
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsAlumnos.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsDiscapacidades.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEmpleados.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEntradaMaterial.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsEscuelas.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsGrupos.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsMaterial.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsPrestamo.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmConsTutores.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEntradaMaterial.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmMenu.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmAlumnos.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmDiscapacidades.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEmpleados.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmEscuelas.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmGastos.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmGrupos.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmMateriales.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPagos.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmPrestamoMaterial.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmTutores.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.Resources.resources
+C:\kinder\Sistema\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbproj.GenerateResource.Cache
