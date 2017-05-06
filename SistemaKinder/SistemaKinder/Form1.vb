@@ -81,4 +81,8 @@
     Private Sub PréstamoMaterialToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PréstamoMaterialToolStripMenuItem.Click
         frmConsPrestamo.ShowDialog()
     End Sub
+
+    Private Sub PagosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PagosToolStripMenuItem1.Click
+        frmConsPagos.ShowDialog()
+    End Sub
 End Class

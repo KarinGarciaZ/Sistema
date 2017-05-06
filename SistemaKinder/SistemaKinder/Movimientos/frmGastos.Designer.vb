@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmGastos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmGastos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.cmdNuevo = New System.Windows.Forms.Button()
         Me.cmdGrabar = New System.Windows.Forms.Button()
@@ -29,30 +29,27 @@ Partial Class frmGastos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.cboNombre = New System.Windows.Forms.ComboBox()
-        Me.txtApm = New System.Windows.Forms.MaskedTextBox()
-        Me.txtApp = New System.Windows.Forms.MaskedTextBox()
-        Me.txtPuesto = New System.Windows.Forms.MaskedTextBox()
-        Me.txtEmail = New System.Windows.Forms.MaskedTextBox()
-        Me.txtTelefono = New System.Windows.Forms.MaskedTextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtIdGasto = New System.Windows.Forms.MaskedTextBox()
         Me.txtConcepto = New System.Windows.Forms.MaskedTextBox()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.txtImporte = New System.Windows.Forms.MaskedTextBox()
-        Me.GroupBox1.SuspendLayout()
+        Me.txtBuscar = New System.Windows.Forms.MaskedTextBox()
+        Me.dgGastos = New System.Windows.Forms.DataGridView()
+        Me.c = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgGastos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdNuevo
         '
         Me.cmdNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdNuevo.Location = New System.Drawing.Point(12, 245)
+        Me.cmdNuevo.Location = New System.Drawing.Point(18, 407)
         Me.cmdNuevo.Name = "cmdNuevo"
         Me.cmdNuevo.Size = New System.Drawing.Size(132, 53)
         Me.cmdNuevo.TabIndex = 0
@@ -62,7 +59,7 @@ Partial Class frmGastos
         'cmdGrabar
         '
         Me.cmdGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdGrabar.Location = New System.Drawing.Point(368, 245)
+        Me.cmdGrabar.Location = New System.Drawing.Point(374, 407)
         Me.cmdGrabar.Name = "cmdGrabar"
         Me.cmdGrabar.Size = New System.Drawing.Size(132, 53)
         Me.cmdGrabar.TabIndex = 1
@@ -72,7 +69,7 @@ Partial Class frmGastos
         'cmdSalir
         '
         Me.cmdSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSalir.Location = New System.Drawing.Point(724, 245)
+        Me.cmdSalir.Location = New System.Drawing.Point(730, 407)
         Me.cmdSalir.Name = "cmdSalir"
         Me.cmdSalir.Size = New System.Drawing.Size(132, 53)
         Me.cmdSalir.TabIndex = 2
@@ -113,133 +110,24 @@ Partial Class frmGastos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(679, 226)
+        Me.Label4.Location = New System.Drawing.Point(342, 377)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Importe:"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.cboNombre)
-        Me.GroupBox1.Controls.Add(Me.txtApm)
-        Me.GroupBox1.Controls.Add(Me.txtApp)
-        Me.GroupBox1.Controls.Add(Me.txtPuesto)
-        Me.GroupBox1.Controls.Add(Me.txtEmail)
-        Me.GroupBox1.Controls.Add(Me.txtTelefono)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 107)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(843, 101)
-        Me.GroupBox1.TabIndex = 7
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Información General"
-        '
-        'cboNombre
-        '
-        Me.cboNombre.FormattingEnabled = True
-        Me.cboNombre.Location = New System.Drawing.Point(69, 19)
-        Me.cboNombre.Name = "cboNombre"
-        Me.cboNombre.Size = New System.Drawing.Size(247, 21)
-        Me.cboNombre.TabIndex = 15
-        '
-        'txtApm
-        '
-        Me.txtApm.Location = New System.Drawing.Point(668, 19)
-        Me.txtApm.Name = "txtApm"
-        Me.txtApm.Size = New System.Drawing.Size(168, 20)
-        Me.txtApm.TabIndex = 14
-        '
-        'txtApp
-        '
-        Me.txtApp.Location = New System.Drawing.Point(421, 19)
-        Me.txtApp.Name = "txtApp"
-        Me.txtApp.Size = New System.Drawing.Size(140, 20)
-        Me.txtApp.TabIndex = 13
-        '
-        'txtPuesto
-        '
-        Me.txtPuesto.Location = New System.Drawing.Point(610, 58)
-        Me.txtPuesto.Name = "txtPuesto"
-        Me.txtPuesto.Size = New System.Drawing.Size(227, 20)
-        Me.txtPuesto.TabIndex = 12
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(295, 58)
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(266, 20)
-        Me.txtEmail.TabIndex = 11
-        '
-        'txtTelefono
-        '
-        Me.txtTelefono.Location = New System.Drawing.Point(69, 58)
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(163, 20)
-        Me.txtTelefono.TabIndex = 10
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(561, 61)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(50, 13)
-        Me.Label10.TabIndex = 5
-        Me.Label10.Text = "Puesto:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(248, 65)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(41, 13)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "Email:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(7, 65)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 13)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "Teléfono:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(561, 23)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(106, 13)
-        Me.Label7.TabIndex = 2
-        Me.Label7.Text = "Apellido Materno:"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(323, 23)
+        Me.Label6.Location = New System.Drawing.Point(115, 54)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(104, 13)
+        Me.Label6.Size = New System.Drawing.Size(175, 13)
         Me.Label6.TabIndex = 1
-        Me.Label6.Text = "Apellido Paterno:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 26)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 13)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Nombre:"
+        Me.Label6.Text = "Buscar empleado por nombre:"
         '
         'txtIdGasto
         '
+        Me.txtIdGasto.Enabled = False
         Me.txtIdGasto.Location = New System.Drawing.Point(741, 22)
         Me.txtIdGasto.Name = "txtIdGasto"
         Me.txtIdGasto.Size = New System.Drawing.Size(116, 20)
@@ -247,6 +135,7 @@ Partial Class frmGastos
         '
         'txtConcepto
         '
+        Me.txtConcepto.Enabled = False
         Me.txtConcepto.Location = New System.Drawing.Point(514, 73)
         Me.txtConcepto.Name = "txtConcepto"
         Me.txtConcepto.Size = New System.Drawing.Size(342, 20)
@@ -254,6 +143,7 @@ Partial Class frmGastos
         '
         'dtpFecha
         '
+        Me.dtpFecha.Enabled = False
         Me.dtpFecha.Location = New System.Drawing.Point(624, 47)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(233, 20)
@@ -261,24 +151,90 @@ Partial Class frmGastos
         '
         'txtImporte
         '
-        Me.txtImporte.Location = New System.Drawing.Point(739, 219)
+        Me.txtImporte.Enabled = False
+        Me.txtImporte.Location = New System.Drawing.Point(402, 370)
         Me.txtImporte.Name = "txtImporte"
         Me.txtImporte.Size = New System.Drawing.Size(116, 20)
         Me.txtImporte.TabIndex = 16
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Enabled = False
+        Me.txtBuscar.Location = New System.Drawing.Point(26, 81)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(307, 20)
+        Me.txtBuscar.TabIndex = 17
+        '
+        'dgGastos
+        '
+        Me.dgGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgGastos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.c, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
+        Me.dgGastos.Location = New System.Drawing.Point(9, 107)
+        Me.dgGastos.Name = "dgGastos"
+        Me.dgGastos.Size = New System.Drawing.Size(847, 257)
+        Me.dgGastos.TabIndex = 18
+        '
+        'c
+        '
+        Me.c.FillWeight = 80.0!
+        Me.c.HeaderText = "ID Empleado"
+        Me.c.Name = "c"
+        '
+        'Column1
+        '
+        Me.Column1.FillWeight = 150.0!
+        Me.Column1.HeaderText = "Nombre"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 150
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Apellido Paterno"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Apellido Materno"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Telefono"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.FillWeight = 150.0!
+        Me.Column5.HeaderText = "E-mail"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 150
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Puesto"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'frmGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(871, 312)
+        Me.ClientSize = New System.Drawing.Size(871, 472)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.dgGastos)
+        Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.txtImporte)
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.txtConcepto)
         Me.Controls.Add(Me.txtIdGasto)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.cmdGrabar)
@@ -288,8 +244,7 @@ Partial Class frmGastos
         Me.Name = "frmGastos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GASTOS"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        CType(Me.dgGastos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -302,21 +257,18 @@ Partial Class frmGastos
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents cboNombre As ComboBox
-    Friend WithEvents txtApm As MaskedTextBox
-    Friend WithEvents txtApp As MaskedTextBox
-    Friend WithEvents txtPuesto As MaskedTextBox
-    Friend WithEvents txtEmail As MaskedTextBox
-    Friend WithEvents txtTelefono As MaskedTextBox
     Friend WithEvents txtIdGasto As MaskedTextBox
     Friend WithEvents txtConcepto As MaskedTextBox
     Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents txtImporte As MaskedTextBox
+    Friend WithEvents txtBuscar As MaskedTextBox
+    Friend WithEvents dgGastos As DataGridView
+    Friend WithEvents c As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class

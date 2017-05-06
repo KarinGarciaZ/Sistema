@@ -24,14 +24,8 @@ Partial Class frmMenu
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CatálogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CatálogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlumnosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TutoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,10 +33,12 @@ Partial Class frmMenu
         Me.EscuelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscapacidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalidaDeMaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntradaDeMaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GastosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlumnosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.TutoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,6 +48,11 @@ Partial Class frmMenu
         Me.GruposToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EscuelaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscapacidadesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PagosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +76,13 @@ Partial Class frmMenu
         Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(90, 29)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Image = Global.SistemaKinder.My.Resources.Resources.Logout_37127
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(121, 30)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
         'CatálogosToolStripMenuItem
         '
         Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.TutoresToolStripMenuItem, Me.GruposToolStripMenuItem, Me.EscuelasToolStripMenuItem, Me.DiscapacidadesToolStripMenuItem, Me.MaterialesToolStripMenuItem})
@@ -82,74 +90,6 @@ Partial Class frmMenu
         Me.CatálogosToolStripMenuItem.Name = "CatálogosToolStripMenuItem"
         Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
         Me.CatálogosToolStripMenuItem.Text = "Catálogos"
-        '
-        'MovimientosToolStripMenuItem
-        '
-        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalidaDeMaterialToolStripMenuItem, Me.EntradaDeMaterialToolStripMenuItem, Me.PagosToolStripMenuItem, Me.GastosToolStripMenuItem})
-        Me.MovimientosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
-        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(137, 29)
-        Me.MovimientosToolStripMenuItem.Text = "Movimientos"
-        '
-        'ConsultasToolStripMenuItem
-        '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem1, Me.EmpleadosToolStripMenuItem1, Me.TutoresToolStripMenuItem1, Me.MaterialToolStripMenuItem, Me.GruposToolStripMenuItem1, Me.EscuelaToolStripMenuItem, Me.DiscapacidadesToolStripMenuItem1})
-        Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
-        Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(107, 29)
-        Me.ConsultasToolStripMenuItem.Text = "Consultas"
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 54.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(171, 174)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(345, 87)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "SISTEMA "
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(-95, 261)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(861, 106)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "GREGORIO TORRES"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.PictureBox3.Image = Global.SistemaKinder.My.Resources.Resources.cropped_cropped_nic3b1os_lindos
-        Me.PictureBox3.Location = New System.Drawing.Point(15, 280)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(643, 270)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 5
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.SistemaKinder.My.Resources.Resources.logo3
-        Me.PictureBox1.Location = New System.Drawing.Point(323, 36)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(347, 249)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'SalirToolStripMenuItem
-        '
-        Me.SalirToolStripMenuItem.Image = Global.SistemaKinder.My.Resources.Resources.Logout_37127
-        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(121, 30)
-        Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'AlumnosToolStripMenuItem
         '
@@ -200,6 +140,14 @@ Partial Class frmMenu
         Me.MaterialesToolStripMenuItem.Size = New System.Drawing.Size(215, 30)
         Me.MaterialesToolStripMenuItem.Text = "Materiales"
         '
+        'MovimientosToolStripMenuItem
+        '
+        Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalidaDeMaterialToolStripMenuItem, Me.EntradaDeMaterialToolStripMenuItem, Me.PagosToolStripMenuItem, Me.GastosToolStripMenuItem})
+        Me.MovimientosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
+        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(137, 29)
+        Me.MovimientosToolStripMenuItem.Text = "Movimientos"
+        '
         'SalidaDeMaterialToolStripMenuItem
         '
         Me.SalidaDeMaterialToolStripMenuItem.Image = Global.SistemaKinder.My.Resources.Resources._164962
@@ -227,6 +175,13 @@ Partial Class frmMenu
         Me.GastosToolStripMenuItem.Name = "GastosToolStripMenuItem"
         Me.GastosToolStripMenuItem.Size = New System.Drawing.Size(268, 30)
         Me.GastosToolStripMenuItem.Text = "Gastos"
+        '
+        'ConsultasToolStripMenuItem
+        '
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem1, Me.EmpleadosToolStripMenuItem1, Me.TutoresToolStripMenuItem1, Me.MaterialToolStripMenuItem, Me.GruposToolStripMenuItem1, Me.EscuelaToolStripMenuItem, Me.DiscapacidadesToolStripMenuItem1, Me.PagosToolStripMenuItem1})
+        Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
+        Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(107, 29)
+        Me.ConsultasToolStripMenuItem.Text = "Consultas"
         '
         'AlumnosToolStripMenuItem1
         '
@@ -292,6 +247,59 @@ Partial Class frmMenu
         Me.DiscapacidadesToolStripMenuItem1.Size = New System.Drawing.Size(215, 30)
         Me.DiscapacidadesToolStripMenuItem1.Text = "Discapacidades"
         '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 54.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(171, 174)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(345, 87)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "SISTEMA "
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(-95, 261)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(861, 106)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "GREGORIO TORRES"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.PictureBox3.Image = Global.SistemaKinder.My.Resources.Resources.cropped_cropped_nic3b1os_lindos
+        Me.PictureBox3.Location = New System.Drawing.Point(15, 280)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(643, 270)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 5
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Image = Global.SistemaKinder.My.Resources.Resources.logo3
+        Me.PictureBox1.Location = New System.Drawing.Point(323, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(347, 249)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'PagosToolStripMenuItem1
+        '
+        Me.PagosToolStripMenuItem1.Image = Global.SistemaKinder.My.Resources.Resources.receiptofcash_cash_money_4581
+        Me.PagosToolStripMenuItem1.Name = "PagosToolStripMenuItem1"
+        Me.PagosToolStripMenuItem1.Size = New System.Drawing.Size(215, 30)
+        Me.PagosToolStripMenuItem1.Text = "Pagos"
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -347,4 +355,5 @@ Partial Class frmMenu
     Friend WithEvents DiscapacidadesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EntradaMaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PréstamoMaterialToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PagosToolStripMenuItem1 As ToolStripMenuItem
 End Class

@@ -77,64 +77,70 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdKinderDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmConsAlumnos.Designer.vb">
+    <Compile Include="Consultas\frmConsAlumnos.Designer.vb">
       <DependentUpon>frmConsAlumnos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsAlumnos.vb">
+    <Compile Include="Consultas\frmConsAlumnos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsDiscapacidades.Designer.vb">
+    <Compile Include="Consultas\frmConsDiscapacidades.Designer.vb">
       <DependentUpon>frmConsDiscapacidades.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsDiscapacidades.vb">
+    <Compile Include="Consultas\frmConsDiscapacidades.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsEmpleados.Designer.vb">
+    <Compile Include="Consultas\frmConsEmpleados.Designer.vb">
       <DependentUpon>frmConsEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsEmpleados.vb">
+    <Compile Include="Consultas\frmConsEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsEntradaMaterial.Designer.vb">
+    <Compile Include="Consultas\frmConsEntradaMaterial.Designer.vb">
       <DependentUpon>frmConsEntradaMaterial.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsEntradaMaterial.vb">
+    <Compile Include="Consultas\frmConsEntradaMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsEscuelas.Designer.vb">
+    <Compile Include="Consultas\frmConsEscuelas.Designer.vb">
       <DependentUpon>frmConsEscuelas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsEscuelas.vb">
+    <Compile Include="Consultas\frmConsEscuelas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsGrupos.Designer.vb">
+    <Compile Include="Consultas\frmConsGrupos.Designer.vb">
       <DependentUpon>frmConsGrupos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsGrupos.vb">
+    <Compile Include="Consultas\frmConsGrupos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsMaterial.Designer.vb">
+    <Compile Include="Consultas\frmConsMaterial.Designer.vb">
       <DependentUpon>frmConsMaterial.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsMaterial.vb">
+    <Compile Include="Consultas\frmConsMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsPrestamo.Designer.vb">
+    <Compile Include="Consultas\frmConsPagos.Designer.vb">
+      <DependentUpon>frmConsPagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsPagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\frmConsPrestamo.Designer.vb">
       <DependentUpon>frmConsPrestamo.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsPrestamo.vb">
+    <Compile Include="Consultas\frmConsPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConsTutores.Designer.vb">
+    <Compile Include="Consultas\frmConsTutores.Designer.vb">
       <DependentUpon>frmConsTutores.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmConsTutores.vb">
+    <Compile Include="Consultas\frmConsTutores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEntradaMaterial.Designer.vb">
+    <Compile Include="Movimientos\frmEntradaMaterial.Designer.vb">
       <DependentUpon>frmEntradaMaterial.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEntradaMaterial.vb">
+    <Compile Include="Movimientos\frmEntradaMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -144,64 +150,64 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlumnos.Designer.vb">
+    <Compile Include="Catalagas\frmAlumnos.Designer.vb">
       <DependentUpon>frmAlumnos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAlumnos.vb">
+    <Compile Include="Catalagas\frmAlumnos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDiscapacidades.Designer.vb">
+    <Compile Include="Catalagas\frmDiscapacidades.Designer.vb">
       <DependentUpon>frmDiscapacidades.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmDiscapacidades.vb">
+    <Compile Include="Catalagas\frmDiscapacidades.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEmpleados.Designer.vb">
+    <Compile Include="Catalagas\frmEmpleados.Designer.vb">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEmpleados.vb">
+    <Compile Include="Catalagas\frmEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEscuelas.Designer.vb">
+    <Compile Include="Catalagas\frmEscuelas.Designer.vb">
       <DependentUpon>frmEscuelas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEscuelas.vb">
+    <Compile Include="Catalagas\frmEscuelas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGastos.Designer.vb">
+    <Compile Include="Movimientos\frmGastos.Designer.vb">
       <DependentUpon>frmGastos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGastos.vb">
+    <Compile Include="Movimientos\frmGastos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGrupos.Designer.vb">
+    <Compile Include="Catalagas\frmGrupos.Designer.vb">
       <DependentUpon>frmGrupos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmGrupos.vb">
+    <Compile Include="Catalagas\frmGrupos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMateriales.Designer.vb">
+    <Compile Include="Catalagas\frmMateriales.Designer.vb">
       <DependentUpon>frmMateriales.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMateriales.vb">
+    <Compile Include="Catalagas\frmMateriales.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPagos.Designer.vb">
+    <Compile Include="Movimientos\frmPagos.Designer.vb">
       <DependentUpon>frmPagos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPagos.vb">
+    <Compile Include="Movimientos\frmPagos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrestamoMaterial.Designer.vb">
+    <Compile Include="Movimientos\frmPrestamoMaterial.Designer.vb">
       <DependentUpon>frmPrestamoMaterial.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPrestamoMaterial.vb">
+    <Compile Include="Movimientos\frmPrestamoMaterial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTutores.Designer.vb">
+    <Compile Include="Catalagas\frmTutores.Designer.vb">
       <DependentUpon>frmTutores.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmTutores.vb">
+    <Compile Include="Catalagas\frmTutores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -221,67 +227,70 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmConsAlumnos.resx">
+    <EmbeddedResource Include="Consultas\frmConsAlumnos.resx">
       <DependentUpon>frmConsAlumnos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsDiscapacidades.resx">
+    <EmbeddedResource Include="Consultas\frmConsDiscapacidades.resx">
       <DependentUpon>frmConsDiscapacidades.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsEmpleados.resx">
+    <EmbeddedResource Include="Consultas\frmConsEmpleados.resx">
       <DependentUpon>frmConsEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsEntradaMaterial.resx">
+    <EmbeddedResource Include="Consultas\frmConsEntradaMaterial.resx">
       <DependentUpon>frmConsEntradaMaterial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsEscuelas.resx">
+    <EmbeddedResource Include="Consultas\frmConsEscuelas.resx">
       <DependentUpon>frmConsEscuelas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsGrupos.resx">
+    <EmbeddedResource Include="Consultas\frmConsGrupos.resx">
       <DependentUpon>frmConsGrupos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsMaterial.resx">
+    <EmbeddedResource Include="Consultas\frmConsMaterial.resx">
       <DependentUpon>frmConsMaterial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsPrestamo.resx">
+    <EmbeddedResource Include="Consultas\frmConsPagos.resx">
+      <DependentUpon>frmConsPagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\frmConsPrestamo.resx">
       <DependentUpon>frmConsPrestamo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConsTutores.resx">
+    <EmbeddedResource Include="Consultas\frmConsTutores.resx">
       <DependentUpon>frmConsTutores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEntradaMaterial.resx">
+    <EmbeddedResource Include="Movimientos\frmEntradaMaterial.resx">
       <DependentUpon>frmEntradaMaterial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAlumnos.resx">
+    <EmbeddedResource Include="Catalagas\frmAlumnos.resx">
       <DependentUpon>frmAlumnos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDiscapacidades.resx">
+    <EmbeddedResource Include="Catalagas\frmDiscapacidades.resx">
       <DependentUpon>frmDiscapacidades.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEmpleados.resx">
+    <EmbeddedResource Include="Catalagas\frmEmpleados.resx">
       <DependentUpon>frmEmpleados.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEscuelas.resx">
+    <EmbeddedResource Include="Catalagas\frmEscuelas.resx">
       <DependentUpon>frmEscuelas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGastos.resx">
+    <EmbeddedResource Include="Movimientos\frmGastos.resx">
       <DependentUpon>frmGastos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGrupos.resx">
+    <EmbeddedResource Include="Catalagas\frmGrupos.resx">
       <DependentUpon>frmGrupos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMateriales.resx">
+    <EmbeddedResource Include="Catalagas\frmMateriales.resx">
       <DependentUpon>frmMateriales.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPagos.resx">
+    <EmbeddedResource Include="Movimientos\frmPagos.resx">
       <DependentUpon>frmPagos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrestamoMaterial.resx">
+    <EmbeddedResource Include="Movimientos\frmPrestamoMaterial.resx">
       <DependentUpon>frmPrestamoMaterial.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTutores.resx">
+    <EmbeddedResource Include="Catalagas\frmTutores.resx">
       <DependentUpon>frmTutores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

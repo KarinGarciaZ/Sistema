@@ -11,6 +11,7 @@ Public Class frmTutores
 
     Private Sub cmdNuevo_Click(sender As Object, e As EventArgs) Handles cmdNuevo.Click
         gbDatos.Enabled = True
+        cmdGuardar.Enabled = True
         comando.CommandText = "SELECT COUNT(*) FROM Tutores"
         txtIdTutor.Text = comando.ExecuteScalar + 1
     End Sub
