@@ -22,6 +22,8 @@ Partial Class frmConsMaterial
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cmdSalir = New System.Windows.Forms.Button()
         Me.dgMateriales = New System.Windows.Forms.DataGridView()
         Me.idMaterial = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -73,6 +75,9 @@ Partial Class frmConsMaterial
         '
         'fechaUltima
         '
+        DataGridViewCellStyle1.Format = "d"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.fechaUltima.DefaultCellStyle = DataGridViewCellStyle1
         Me.fechaUltima.HeaderText = "Última Fecha Compra"
         Me.fechaUltima.Name = "fechaUltima"
         Me.fechaUltima.ReadOnly = True
@@ -100,6 +105,9 @@ Partial Class frmConsMaterial
         '
         'costo
         '
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.costo.DefaultCellStyle = DataGridViewCellStyle2
         Me.costo.HeaderText = "Costo"
         Me.costo.Name = "costo"
         Me.costo.ReadOnly = True
@@ -115,7 +123,9 @@ Partial Class frmConsMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(774, 288)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.dgMateriales)
         Me.Name = "frmConsMaterial"

@@ -54,6 +54,7 @@ Partial Class frmPrestamoMaterial
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.dgEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -96,6 +97,7 @@ Partial Class frmPrestamoMaterial
         Me.txtConcepto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtConcepto.Enabled = False
         Me.txtConcepto.Location = New System.Drawing.Point(156, 8)
+        Me.txtConcepto.Mask = "??????????????????????????????????????????????????"
         Me.txtConcepto.Name = "txtConcepto"
         Me.txtConcepto.Size = New System.Drawing.Size(440, 20)
         Me.txtConcepto.TabIndex = 6
@@ -103,7 +105,7 @@ Partial Class frmPrestamoMaterial
         'cmdNuevo
         '
         Me.cmdNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdNuevo.Location = New System.Drawing.Point(8, 605)
+        Me.cmdNuevo.Location = New System.Drawing.Point(7, 631)
         Me.cmdNuevo.Name = "cmdNuevo"
         Me.cmdNuevo.Size = New System.Drawing.Size(239, 49)
         Me.cmdNuevo.TabIndex = 7
@@ -114,7 +116,7 @@ Partial Class frmPrestamoMaterial
         '
         Me.cmdGuardar.Enabled = False
         Me.cmdGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdGuardar.Location = New System.Drawing.Point(274, 605)
+        Me.cmdGuardar.Location = New System.Drawing.Point(273, 631)
         Me.cmdGuardar.Name = "cmdGuardar"
         Me.cmdGuardar.Size = New System.Drawing.Size(250, 49)
         Me.cmdGuardar.TabIndex = 8
@@ -124,7 +126,7 @@ Partial Class frmPrestamoMaterial
         'cmdSalir
         '
         Me.cmdSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdSalir.Location = New System.Drawing.Point(551, 605)
+        Me.cmdSalir.Location = New System.Drawing.Point(550, 631)
         Me.cmdSalir.Name = "cmdSalir"
         Me.cmdSalir.Size = New System.Drawing.Size(230, 49)
         Me.cmdSalir.TabIndex = 9
@@ -323,7 +325,7 @@ Partial Class frmPrestamoMaterial
         Me.dgMateriales.Location = New System.Drawing.Point(181, 441)
         Me.dgMateriales.Name = "dgMateriales"
         Me.dgMateriales.ReadOnly = True
-        Me.dgMateriales.Size = New System.Drawing.Size(473, 158)
+        Me.dgMateriales.Size = New System.Drawing.Size(473, 184)
         Me.dgMateriales.TabIndex = 17
         '
         'DataGridViewTextBoxColumn4
@@ -346,12 +348,26 @@ Partial Class frmPrestamoMaterial
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Image = Global.SistemaKinder.My.Resources.Resources.basurita1
+        Me.btnEliminar.Location = New System.Drawing.Point(22, 441)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(135, 184)
+        Me.btnEliminar.TabIndex = 21
+        Me.btnEliminar.Text = "Quitar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'frmPrestamoMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(803, 666)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.ClientSize = New System.Drawing.Size(803, 683)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgMateriales)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -413,4 +429,5 @@ Partial Class frmPrestamoMaterial
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents btnEliminar As Button
 End Class

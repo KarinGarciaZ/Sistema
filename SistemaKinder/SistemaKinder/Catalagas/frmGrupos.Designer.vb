@@ -210,6 +210,7 @@ Partial Class frmGrupos
         '
         Me.txtGeneracion.Enabled = False
         Me.txtGeneracion.Location = New System.Drawing.Point(75, 44)
+        Me.txtGeneracion.Mask = "0000-0000"
         Me.txtGeneracion.Name = "txtGeneracion"
         Me.txtGeneracion.Size = New System.Drawing.Size(139, 20)
         Me.txtGeneracion.TabIndex = 9
@@ -230,7 +231,9 @@ Partial Class frmGrupos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(518, 225)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtIdGrupo)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)

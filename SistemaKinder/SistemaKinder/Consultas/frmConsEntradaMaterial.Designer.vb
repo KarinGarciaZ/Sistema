@@ -22,6 +22,14 @@ Partial Class frmConsEntradaMaterial
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgEntrada = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.proveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,6 +72,8 @@ Partial Class frmConsEntradaMaterial
         '
         'Column1
         '
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle1
         Me.Column1.HeaderText = "ID Entrada"
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
@@ -78,24 +88,36 @@ Partial Class frmConsEntradaMaterial
         '
         'fecha
         '
+        DataGridViewCellStyle2.Format = "d"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.fecha.DefaultCellStyle = DataGridViewCellStyle2
         Me.fecha.HeaderText = "Fecha"
         Me.fecha.Name = "fecha"
         Me.fecha.ReadOnly = True
         '
         'subtotal
         '
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.subtotal.DefaultCellStyle = DataGridViewCellStyle3
         Me.subtotal.HeaderText = "Subtotal"
         Me.subtotal.Name = "subtotal"
         Me.subtotal.ReadOnly = True
         '
         'iva
         '
+        DataGridViewCellStyle4.Format = "C2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.iva.DefaultCellStyle = DataGridViewCellStyle4
         Me.iva.HeaderText = "IVA"
         Me.iva.Name = "iva"
         Me.iva.ReadOnly = True
         '
         'total
         '
+        DataGridViewCellStyle5.Format = "C2"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.total.DefaultCellStyle = DataGridViewCellStyle5
         Me.total.HeaderText = "Total"
         Me.total.Name = "total"
         Me.total.ReadOnly = True
@@ -223,18 +245,27 @@ Partial Class frmConsEntradaMaterial
         '
         'DataGridViewTextBoxColumn6
         '
+        DataGridViewCellStyle6.Format = "C2"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn6.HeaderText = "Cantidad"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
+        DataGridViewCellStyle7.Format = "C2"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridViewTextBoxColumn5.HeaderText = "Costo"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'Column2
         '
+        DataGridViewCellStyle8.Format = "C2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle8
         Me.Column2.HeaderText = "Importe"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
@@ -243,6 +274,7 @@ Partial Class frmConsEntradaMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(735, 551)
         Me.ControlBox = False
         Me.Controls.Add(Me.dgDetalle)
@@ -261,12 +293,6 @@ Partial Class frmConsEntradaMaterial
     End Sub
     Friend WithEvents dgEntrada As DataGridView
     Friend WithEvents cmdSalir As Button
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents proveedor As DataGridViewTextBoxColumn
-    Friend WithEvents fecha As DataGridViewTextBoxColumn
-    Friend WithEvents subtotal As DataGridViewTextBoxColumn
-    Friend WithEvents iva As DataGridViewTextBoxColumn
-    Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents txtProveedor As MaskedTextBox
@@ -275,10 +301,16 @@ Partial Class frmConsEntradaMaterial
     Friend WithEvents rbProveedor As RadioButton
     Friend WithEvents rbID As RadioButton
     Friend WithEvents dgDetalle As DataGridView
+    Friend WithEvents rbTodos As RadioButton
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents proveedor As DataGridViewTextBoxColumn
+    Friend WithEvents fecha As DataGridViewTextBoxColumn
+    Friend WithEvents subtotal As DataGridViewTextBoxColumn
+    Friend WithEvents iva As DataGridViewTextBoxColumn
+    Friend WithEvents total As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents rbTodos As RadioButton
 End Class

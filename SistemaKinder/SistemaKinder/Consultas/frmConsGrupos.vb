@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmConsGrupos
 
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
 
@@ -12,7 +12,8 @@ Public Class frmConsGrupos
     End Sub
 
     Private Sub cboGrupo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGrupo.SelectedIndexChanged
-        If Not cboGrupo.Text.Equals("") Then
+        If Not cboGrado.Text.Equals("") Then
+            dgGrupos.Rows.Clear()
             Dim R As String
             Dim id As Integer
             Dim gdo As Integer = cboGrado.SelectedValue
@@ -20,47 +21,52 @@ Public Class frmConsGrupos
             R = "SELECT  Grupos.idGrupo, Grupos.generacion, Grupos.grado, Grupos.grupo, Grupos.noAlumnos, Empleados.nombre FROM Grupos INNER JOIN Empleados ON Grupos.idEmpleado = Empleados.idEmpleado WHERE Grado = " & gdo & " AND Grupo = '" & gpo & "'"
             comando.CommandText = R
             lector = comando.ExecuteReader
-            lector.Read()
-            id = lector(0)
-            txtGeneracion.Text = lector(1)
-            txtTotalAlumnos.Text = lector(4)
-            txtMaestro.Text = lector(5)
-            lector.Close()
+            If lector.Read() Then
+                id = lector(0)
+                txtGeneracion.Text = lector(1)
+                txtTotalAlumnos.Text = lector(4)
+                txtMaestro.Text = lector(5)
+                lector.Close()
 
-            R = "SELECT Alumnos.matricula, Alumnos.nombre, Alumnos.apellidoPaterno, Alumnos.apellidoMaterno FROM Alumnos WHERE idGrupo = " & id
-            comando.CommandText = R
-            lector = comando.ExecuteReader
-            While lector.Read
-                dgGrupos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
-            End While
+                R = "SELECT Alumnos.matricula, Alumnos.nombre, Alumnos.apellidoPaterno, Alumnos.apellidoMaterno FROM Alumnos WHERE idGrupo = " & id
+                comando.CommandText = R
+                lector = comando.ExecuteReader
+                While lector.Read
+                    dgGrupos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
+                End While
+                lector.Close()
+            End If
             lector.Close()
 
         End If
     End Sub
 
     Private Sub cboGrado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGrado.SelectedIndexChanged
-        If Not cboGrado.Text.Equals("") Then
+        If Not cboGrupo.Text.Equals("") Then
+            dgGrupos.Rows.Clear()
             Dim R As String
             Dim id As Integer
             Dim gdo As Integer = cboGrado.SelectedValue
             Dim gpo As String = cboGrupo.SelectedValue
             R = "SELECT  Grupos.idGrupo, Grupos.generacion, Grupos.grado, Grupos.grupo, Grupos.noAlumnos, Empleados.nombre FROM Grupos INNER JOIN Empleados ON Grupos.idEmpleado = Empleados.idEmpleado WHERE Grado = " & gdo & " AND Grupo = '" & gpo & "'"
-            MessageBox.Show(R)
             comando.CommandText = R
             lector = comando.ExecuteReader
-            lector.Read()
-            txtGeneracion.Text = lector(1)
-            txtTotalAlumnos.Text = lector(4)
-            txtMaestro.Text = lector(5)
-            id = lector(0)
-            lector.Close()
+            If lector.Read() Then
+                txtGeneracion.Text = lector(1)
+                txtTotalAlumnos.Text = lector(4)
+                txtMaestro.Text = lector(5)
+                id = lector(0)
 
-            R = "SELECT * FROM Alumnos WHERE idGrupo = " & id
-            comando.CommandText = R
-            lector = comando.ExecuteReader
-            While lector.Read
-                dgGrupos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
-            End While
+                lector.Close()
+
+                R = "SELECT * FROM Alumnos WHERE idGrupo = " & id
+                comando.CommandText = R
+                lector = comando.ExecuteReader
+                While lector.Read
+                    dgGrupos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
+                End While
+            End If
+
             lector.Close()
         End If
     End Sub

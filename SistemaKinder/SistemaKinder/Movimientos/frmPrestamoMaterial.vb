@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmPrestamoMaterial
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
     Private Sub frmPrestamoMaterial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -58,15 +58,39 @@ Public Class frmPrestamoMaterial
     End Sub
 
     Private Sub cmdAgregar_Click(sender As Object, e As EventArgs) Handles cmdAgregar.Click
-        If dgBuscarMateriales.Rows.Count > 0 And Not txtCantidad.Text.Equals("") Then
-            Dim pos As Integer = dgBuscarMateriales.Item(0, dgBuscarMateriales.CurrentRow.Index).Value
-            Dim nombre As String = dgBuscarMateriales.Item(1, dgBuscarMateriales.CurrentRow.Index).Value
-            dgMateriales.Rows.Add(pos, nombre, txtCantidad.Text)
-            txtCantidad.Text = ""
-            txtBuscarMaterial.Text = ""
-            dgBuscarMateriales.Rows.Clear()
+        If dgBuscarMateriales.Rows.Count > 0 And Not txtCantidad.Text.Equals("") And IsNumeric(txtCantidad.Text) Then
+            If Not CDbl(txtCantidad.Text) > 2147483647 And Not CDbl(txtCantidad.Text) < 1 Then
+                If dgBuscarMateriales.Item(2, dgBuscarMateriales.CurrentRow.Index).Value >= CDbl(txtCantidad.Text) Then
+
+                    Dim ban As Boolean = False
+                    Dim pos As Integer
+                    Dim id As Integer = dgBuscarMateriales.Item(0, dgBuscarMateriales.CurrentRow.Index).Value
+
+                    For i = 0 To dgMateriales.Rows.Count - 1
+                        If id = dgMateriales.Item(0, i).Value Then
+                            pos = i
+                            ban = True
+                        End If
+                    Next
+
+                    If ban = False Then
+                        Dim nombre As String = dgBuscarMateriales.Item(1, dgBuscarMateriales.CurrentRow.Index).Value
+                        dgMateriales.Rows.Add(id, nombre, txtCantidad.Text)
+                        txtCantidad.Text = ""
+                        txtBuscarMaterial.Text = ""
+                        dgBuscarMateriales.Rows.Clear()
+                    Else
+                        dgMateriales.Item(2, pos).Value += CDbl(txtCantidad.Text)
+                    End If
+                Else
+                    MessageBox.Show("No hay suficientes materiales para realizar la operación")
+                End If
+
+            Else
+                    MessageBox.Show("No se aceptan valores numericos mayores a 2,147,483,647 ó menores a 1")
+            End If
         Else
-            MsgBox("Asegure llenar los campos y haber seleccionado un material.")
+            MsgBox("Asegure llenar los campos, haber seleccionado un material y poner un valor numérico.")
         End If
     End Sub
 
@@ -123,5 +147,13 @@ Public Class frmPrestamoMaterial
 
     Private Sub dgBuscarMateriales_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgBuscarMateriales.CellClick
         dgBuscarMateriales.CurrentRow.Selected = True
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        dgMateriales.Rows.Remove(dgMateriales.SelectedRows(0))
+    End Sub
+
+    Private Sub dgMateriales_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgMateriales.CellClick
+        dgMateriales.CurrentRow.Selected = True
     End Sub
 End Class

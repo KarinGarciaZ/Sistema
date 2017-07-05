@@ -23,7 +23,7 @@
         frmGrupos.ShowDialog()
     End Sub
 
-    Private Sub EscuelasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EscuelasToolStripMenuItem.Click
+    Private Sub EscuelasToolStripMenuItem_Click(sender As Object, e As EventArgs)
         frmEscuelas.ShowDialog()
     End Sub
 
@@ -66,7 +66,7 @@
         frmConsGrupos.ShowDialog()
     End Sub
 
-    Private Sub EscuelaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EscuelaToolStripMenuItem.Click
+    Private Sub EscuelaToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         frmConsEscuelas.ShowDialog()
     End Sub
 
@@ -84,5 +84,9 @@
 
     Private Sub PagosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PagosToolStripMenuItem1.Click
         frmConsPagos.ShowDialog()
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
     End Sub
 End Class

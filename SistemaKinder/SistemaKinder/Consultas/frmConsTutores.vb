@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmConsTutores
 
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
 
@@ -35,14 +35,21 @@ Public Class frmConsTutores
         R = "SELECT * FROM Tutores"
         comando.CommandText = R
         lector = comando.ExecuteReader
-
+        Dim gen As String
         While lector.Read
-            dgGeneral.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(7), lector(6), lector(8), lector(9), lector(12), lector(13), lector(11))
+            If lector(6) Then
+                gen = "Femenino"
+            Else
+                gen = "Masculino"
+            End If
+            dgGeneral.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(7), gen, lector(8), lector(9), lector(12), lector(13), lector(11))
         End While
         lector.Close()
     End Sub
 
     Private Sub cboTutor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTutor.SelectedIndexChanged
+        dgGeneral.Rows.Clear()
+        dgTutor.Rows.Clear()
         Dim id As Integer = cboTutor.SelectedValue
         Dim R As String
 

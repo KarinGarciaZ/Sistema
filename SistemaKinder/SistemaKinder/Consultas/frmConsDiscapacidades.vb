@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmConsDiscapacidades
 
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As New SqlConnection("Data Source = 'DIEGO'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
 

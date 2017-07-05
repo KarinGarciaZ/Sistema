@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmGastos
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
     Private Sub frmGastos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,30 +39,37 @@ Public Class frmGastos
         txtBuscar.Enabled = True
         txtConcepto.Enabled = True
         dtpFecha.Enabled = True
-        txtIdGasto.Enabled = True
         txtImporte.Enabled = True
+        cmdNuevo.Enabled = False
+        cmdGrabar.Enabled = True
         comando.CommandText = "select count(*) from Gastos"
         Dim n As Integer = comando.ExecuteScalar
         txtIdGasto.Text = n + 1
     End Sub
 
     Private Sub cmdGrabar_Click(sender As Object, e As EventArgs) Handles cmdGrabar.Click
-        If Not txtImporte.Text.Equals("") And Not txtConcepto.Text.Equals("") Then
-            Dim idEmp As Integer = dgGastos.Item(0, dgGastos.CurrentRow.Index).Value
-            comando.CommandText = "insert into Gastos values(" & txtIdGasto.Text & "," & idEmp & ",'" & txtConcepto.Text & "','" & dtpFecha.Value.Date & "'," & txtImporte.Text & ")"
-            comando.ExecuteNonQuery()
-            txtBuscar.Enabled = False
-            txtConcepto.Enabled = False
-            dtpFecha.Enabled = False
-            txtIdGasto.Enabled = False
-            txtImporte.Enabled = False
-            txtBuscar.Text = ""
-            txtConcepto.Text = ""
-            txtImporte.Text = ""
-            txtIdGasto.Text = ""
-            dgGastos.Rows.Clear()
+        If Not txtImporte.Text.Equals("") And Not txtConcepto.Text.Equals("") And IsNumeric(txtImporte.Text) Then
+            If Not CDbl(txtImporte.Text) > 2147483647 And Not CDbl(txtImporte.Text) < 1 Then
+                Dim idEmp As Integer = dgGastos.Item(0, dgGastos.CurrentRow.Index).Value
+                comando.CommandText = "insert into Gastos values(" & txtIdGasto.Text & "," & idEmp & ",'" & txtConcepto.Text & "','" & dtpFecha.Value.Date & "'," & txtImporte.Text & ")"
+                comando.ExecuteNonQuery()
+                txtBuscar.Enabled = False
+                txtConcepto.Enabled = False
+                dtpFecha.Enabled = False
+                txtIdGasto.Enabled = False
+                cmdGrabar.Enabled = False
+                txtImporte.Enabled = False
+                cmdNuevo.Enabled = True
+                txtBuscar.Text = ""
+                txtConcepto.Text = ""
+                txtImporte.Text = ""
+                txtIdGasto.Text = ""
+                dgGastos.Rows.Clear()
+            Else
+                MessageBox.Show("No se aceptan valores numericos mayores a 922,337,203,685,477")
+            End If
         Else
-            MsgBox("Asegure que el concepto y el importe no esten vacíos.")
+                MsgBox("Asegure que el concepto y el importe no esten vacíos.")
         End If
 
     End Sub

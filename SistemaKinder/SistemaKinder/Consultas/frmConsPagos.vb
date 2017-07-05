@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmConsPagos
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
     Private Sub rbID_CheckedChanged(sender As Object, e As EventArgs) Handles rbID.CheckedChanged
@@ -139,4 +139,5 @@ Public Class frmConsPagos
         End While
         lector.Close()
     End Sub
+
 End Class

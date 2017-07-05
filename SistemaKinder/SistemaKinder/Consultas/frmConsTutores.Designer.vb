@@ -49,17 +49,17 @@ Partial Class frmConsTutores
         Me.cel = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ocup = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cboTutor = New System.Windows.Forms.ComboBox()
+        Me.TutoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdKinderDataSet = New SistemaKinder.bdKinderDataSet()
         Me.txtApp = New System.Windows.Forms.TextBox()
         Me.txtApm = New System.Windows.Forms.TextBox()
         Me.lblApp = New System.Windows.Forms.Label()
         Me.lblApm = New System.Windows.Forms.Label()
-        Me.BdKinderDataSet = New SistemaKinder.bdKinderDataSet()
-        Me.TutoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TutoresTableAdapter = New SistemaKinder.bdKinderDataSetTableAdapters.TutoresTableAdapter()
         CType(Me.dgGeneral, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgTutor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TutoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdSalir
@@ -265,6 +265,16 @@ Partial Class frmConsTutores
         Me.cboTutor.ValueMember = "idTutor"
         Me.cboTutor.Visible = False
         '
+        'TutoresBindingSource
+        '
+        Me.TutoresBindingSource.DataMember = "Tutores"
+        Me.TutoresBindingSource.DataSource = Me.BdKinderDataSet
+        '
+        'BdKinderDataSet
+        '
+        Me.BdKinderDataSet.DataSetName = "bdKinderDataSet"
+        Me.BdKinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'txtApp
         '
         Me.txtApp.Enabled = False
@@ -305,16 +315,6 @@ Partial Class frmConsTutores
         Me.lblApm.Text = "Apellido Materno:"
         Me.lblApm.Visible = False
         '
-        'BdKinderDataSet
-        '
-        Me.BdKinderDataSet.DataSetName = "bdKinderDataSet"
-        Me.BdKinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TutoresBindingSource
-        '
-        Me.TutoresBindingSource.DataMember = "Tutores"
-        Me.TutoresBindingSource.DataSource = Me.BdKinderDataSet
-        '
         'TutoresTableAdapter
         '
         Me.TutoresTableAdapter.ClearBeforeFill = True
@@ -323,7 +323,9 @@ Partial Class frmConsTutores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(1283, 325)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lblApm)
         Me.Controls.Add(Me.lblApp)
         Me.Controls.Add(Me.txtApm)
@@ -339,8 +341,8 @@ Partial Class frmConsTutores
         Me.Text = "CONSULTA DE TUTORES"
         CType(Me.dgGeneral, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgTutor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TutoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

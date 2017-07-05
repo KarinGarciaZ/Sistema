@@ -317,6 +317,16 @@ Used to sort self-referenced table's rows
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaKinder.My.Resources.Resources.basurita">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.basurita1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaKinder.My.Resources.Resources.botones_01">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

@@ -68,7 +68,9 @@ Partial Class frmConsDiscapacidades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(471, 285)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.dgDiscapacidades)
         Me.Name = "frmConsDiscapacidades"

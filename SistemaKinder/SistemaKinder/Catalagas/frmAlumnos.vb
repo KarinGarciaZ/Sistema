@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmAlumnos
 
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
 
@@ -38,9 +38,8 @@ Public Class frmAlumnos
         txtYCalle.Enabled = True
         txtCp.Enabled = True
         txtLocalidad.Enabled = True
-        txtParentesco.Enabled = True
         cmdGuardar.Enabled = True
-
+        cmdNuevo.Enabled = False
     End Sub
 
     Private Sub frmAlumnos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -59,92 +58,199 @@ Public Class frmAlumnos
     End Sub
 
     Private Sub cmdGuardar_Click(sender As Object, e As EventArgs) Handles cmdGuardar.Click
-        Dim mat As Integer = txtMatricula.Text
-        Dim nom As String = txtNombre.Text
-        Dim app As String = txtApellidoPaterno.Text
-        Dim apm As String = txtApellidoMaterno.Text
-        Dim fdn As String = txtFNacimiento.Text
-        Dim dis As Integer = cboDiscapacidades.SelectedValue
-        Dim gen As String = cboGenero.Text
-        Dim cur As String = txtCurp.Text
-        Dim ent As String = txtEntidad.Text
-        Dim tut As Integer = cboTutor.SelectedValue
-        Dim cdv As String = txtCalleDondeVive.Text
-        Dim numEx As String = txtNumExterior.Text
-        Dim numIn As String = txtNumInterior.Text
-        Dim enc As String = txtEntreCalle.Text
-        Dim yca As String = txtYCalle.Text
-        Dim col As String = txtColonia.Text
-        Dim cp As String = txtCp.Text
-        Dim mun As String = txtMunicipio.Text
-        Dim loc As String = txtLocalidad.Text
-        Dim gpo As Integer = cboGrupo.SelectedValue
-        Dim tsa As String = txtTipoSangre.Text
-        Dim bit As Integer = 0
+        If Not txtNombre.Text.Equals("") And Not txtNombre.Text.Contains("'") Then
+            If Not txtApellidoPaterno.Text.Equals("") And Not txtApellidoPaterno.Text.Contains("'") Then
+                If Not txtApellidoMaterno.Text.Equals("") And Not txtApellidoMaterno.Text.Contains("'") Then
+                    If IsDate(txtFNacimiento.Text) Then
+                        If Not txtCurp.Text.Equals("") And Not txtCurp.Text.Contains("'") Then
+                            If Not txtEntidad.Text.Equals("") And Not txtEntidad.Text.Contains("'") Then
+                                If Not txtCalleDondeVive.Text.Equals("") And Not txtCalleDondeVive.Text.Contains("'") Then
+                                    If Not txtNumExterior.Text.Equals("") And Not txtNumExterior.Text.Contains("'") Then
+                                        If Not txtNumInterior.Text.Contains("'") Then
+                                            If Not txtEntreCalle.Text.Equals("") And Not txtEntreCalle.Text.Contains("'") Then
+                                                If Not txtYCalle.Text.Equals("") And Not txtYCalle.Text.Contains("'") Then
+                                                    If Not txtColonia.Text.Equals("") And Not txtColonia.Text.Contains("'") Then
+                                                        If Not txtCp.Text.Equals("") And Not txtCp.Text.Contains("'") Then
+                                                            If Not txtMunicipio.Text.Equals("") And Not txtMunicipio.Text.Contains("'") Then
+                                                                If Not txtLocalidad.Text.Equals("") And Not txtNombre.Text.Contains("'") Then
+                                                                    If Not txtTipoSangre.Text.Contains("'") Then
+                                                                        If IsNumeric(txtMatricula.Text) Then
+                                                                            If Not CDbl(txtMatricula.Text) > 2147483647 And Not CDbl(txtMatricula.Text) < 1 Then
+                                                                                Dim ban As Boolean = False
+                                                                                Dim S As String
+                                                                                S = "SELECT matricula FROM Alumnos"
+                                                                                comando.CommandText = S
+                                                                                lector = comando.ExecuteReader
+                                                                                While lector.Read
+                                                                                    If lector(0) = CInt(txtMatricula.Text) Then
+                                                                                        ban = True
+                                                                                    End If
+                                                                                End While
+                                                                                lector.Close()
+                                                                                If Not ban Then
+                                                                                    Dim mat As Integer = txtMatricula.Text
+                                                                                    Dim nom As String = txtNombre.Text
+                                                                                    Dim app As String = txtApellidoPaterno.Text
+                                                                                    Dim apm As String = txtApellidoMaterno.Text
+                                                                                    Dim fdn As String = txtFNacimiento.Text
+                                                                                    Dim dis As Integer = cboDiscapacidades.SelectedValue
+                                                                                    Dim gen As String = cboGenero.Text
+                                                                                    Dim cur As String = txtCurp.Text
+                                                                                    Dim ent As String = txtEntidad.Text
+                                                                                    Dim tut As Integer = cboTutor.SelectedValue
+                                                                                    Dim cdv As String = txtCalleDondeVive.Text
+                                                                                    Dim numEx As String = txtNumExterior.Text
+                                                                                    Dim numIn As String = txtNumInterior.Text
+                                                                                    Dim enc As String = txtEntreCalle.Text
+                                                                                    Dim yca As String = txtYCalle.Text
+                                                                                    Dim col As String = txtColonia.Text
+                                                                                    Dim cp As String = txtCp.Text
+                                                                                    Dim mun As String = txtMunicipio.Text
+                                                                                    Dim loc As String = txtLocalidad.Text
+                                                                                    Dim gpo As Integer = cboGrupo.SelectedValue
+                                                                                    Dim tsa As String = txtTipoSangre.Text
+                                                                                    Dim bit As Integer = 0
 
-        If gen.Equals("Femenino") Then
-            bit = 1
+                                                                                    If gen.Equals("Femenino") Then
+                                                                                        bit = 1
+                                                                                    End If
+
+                                                                                    If gen.Equals("Masculino") Then
+                                                                                        bit = 0
+                                                                                    End If
+
+                                                                                    Dim R As String
+                                                                                    R = "INSERT INTO Alumnos (matricula, nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, idDiscapacidad, genero, curp, entidadNacimiento, idTutor, calle, noExterior, noInterior, entreCalle, yCalle, colonia, cP, municipio, localidad, idGrupo, tipoSangre) VALUES(" & mat & ",'" & nom & "','" & app & "','" & apm & "','" & fdn & "'," & dis & "," & bit & ",'" & cur & "','" & ent & "'," & tut & ",'" & cdv & "','" & numEx & "','" & numIn & "','" & enc & "','" & yca & "','" & col & "','" & cp & "','" & mun & "','" & loc & "'," & gpo & ",'" & tsa & "')"
+                                                                                    comando.CommandText = R
+                                                                                    comando.ExecuteNonQuery()
+
+                                                                                    txtMatricula.Enabled = False
+                                                                                    txtApellidoPaterno.Enabled = False
+                                                                                    txtApellidoMaterno.Enabled = False
+                                                                                    txtNombre.Enabled = False
+                                                                                    txtFNacimiento.Enabled = False
+                                                                                    cboGenero.Enabled = False
+                                                                                    txtTipoSangre.Enabled = False
+                                                                                    txtEntidad.Enabled = False
+                                                                                    txtCurp.Enabled = False
+                                                                                    radioSI.Enabled = False
+                                                                                    radioNO.Enabled = False
+                                                                                    cboDiscapacidades.Enabled = False
+                                                                                    txtCalleDondeVive.Enabled = False
+                                                                                    txtEntreCalle.Enabled = False
+                                                                                    txtColonia.Enabled = False
+                                                                                    txtMunicipio.Enabled = False
+                                                                                    cboTutor.Enabled = False
+                                                                                    cboGrupo.Enabled = False
+                                                                                    txtNumExterior.Enabled = False
+                                                                                    txtNumInterior.Enabled = False
+                                                                                    txtYCalle.Enabled = False
+                                                                                    txtCp.Enabled = False
+                                                                                    txtLocalidad.Enabled = False
+                                                                                    txtParentesco.Enabled = False
+                                                                                    cmdGuardar.Enabled = False
+
+                                                                                    txtMatricula.Text = ""
+                                                                                    txtApellidoPaterno.Text = ""
+                                                                                    txtApellidoMaterno.Text = ""
+                                                                                    txtNombre.Text = ""
+                                                                                    txtFNacimiento.Text = ""
+                                                                                    cboGenero.Text = ""
+                                                                                    txtTipoSangre.Text = ""
+                                                                                    txtEntidad.Text = ""
+                                                                                    txtCurp.Text = ""
+                                                                                    cboDiscapacidades.Text = ""
+                                                                                    txtCalleDondeVive.Text = ""
+                                                                                    txtEntreCalle.Text = ""
+                                                                                    txtColonia.Text = ""
+                                                                                    txtMunicipio.Text = ""
+                                                                                    cboTutor.Text = ""
+                                                                                    cboGrupo.Text = ""
+                                                                                    txtNumExterior.Text = ""
+                                                                                    txtNumInterior.Text = ""
+                                                                                    txtYCalle.Text = ""
+                                                                                    txtCp.Text = ""
+                                                                                    txtLocalidad.Text = ""
+                                                                                    txtParentesco.Text = ""
+                                                                                    cmdGuardar.Enabled = False
+                                                                                    cmdNuevo.Enabled = True
+                                                                                Else
+                                                                                    MessageBox.Show("La matricula ya se encuentra registrada")
+                                                                                End If
+                                                                            Else
+                                                                                MessageBox.Show("No se aceptan valores numericos mayores a 2,147,483,647 ó menores a 1")
+                                                                            End If
+
+                                                                        Else
+                                                                                MessageBox.Show("La matrícula debe ser un valor numerico")
+                                                                        End If
+                                                                    Else
+                                                                        MessageBox.Show("Introduzca un valor válido para tipo de sangre")
+                                                                    End If
+                                                                Else
+                                                                    MessageBox.Show("Introduzca un valor válido para localidad")
+                                                                End If
+                                                            Else
+                                                                MessageBox.Show("Introduzca un valor válido para municipio")
+                                                            End If
+                                                        Else
+                                                            MessageBox.Show("Introduzca un valor válido para CP ")
+                                                        End If
+                                                    Else
+                                                        MessageBox.Show("Introduzca un valor válido para colonia")
+                                                    End If
+                                                Else
+                                                    MessageBox.Show("Introduzca un valor válido para y calle")
+                                                End If
+                                            Else
+                                                MessageBox.Show("Introduzca un valor válido para entre calle")
+                                            End If
+                                        Else
+                                            MessageBox.Show("Introduzca un valor válido para número interior")
+                                        End If
+                                    Else
+                                        MessageBox.Show("Introduzca un valor válido para número exterior")
+                                    End If
+                                Else
+                                    MessageBox.Show("Introduzca un valor válido para calle donde vive")
+                                End If
+                            Else
+                                MessageBox.Show("Introduzca un valor válido para entidad")
+                            End If
+                        Else
+                            MessageBox.Show("Introduzca un valor válido para curp")
+                        End If
+                    Else
+                        MessageBox.Show("Introduzca un valor válido para fecha de nacimiento")
+                    End If
+                Else
+                    MessageBox.Show("Introduzca un valor válido para apellido materno")
+                End If
+            Else
+                MessageBox.Show("Introduzca un valor válido para apellido paterno")
+            End If
+        Else
+            MessageBox.Show("Introduzca un valor válido para nombre ")
         End If
-
-        If gen.Equals("Masculino") Then
-            bit = 0
-        End If
-
-        Dim R As String
-        R = "INSERT INTO Alumnos (matricula, nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, idDiscapacidad, genero, curp, entidadNacimiento, idTutor, calle, noExterior, noInterior, entreCalle, yCalle, colonia, cP, municipio, localidad, idGrupo, tipoSangre) VALUES(" & mat & ",'" & nom & "','" & app & "','" & apm & "','" & fdn & "'," & dis & "," & bit & ",'" & cur & "','" & ent & "'," & tut & ",'" & cdv & "','" & numEx & "','" & numIn & "','" & enc & "','" & yca & "','" & col & "','" & cp & "','" & mun & "','" & loc & "'," & gpo & ",'" & tsa & "')"
-        comando.CommandText = R
-        comando.ExecuteNonQuery()
-
-        txtMatricula.Enabled = False
-        txtApellidoPaterno.Enabled = False
-        txtApellidoMaterno.Enabled = False
-        txtNombre.Enabled = False
-        txtFNacimiento.Enabled = False
-        cboGenero.Enabled = False
-        txtTipoSangre.Enabled = False
-        txtEntidad.Enabled = False
-        txtCurp.Enabled = False
-        radioSI.Enabled = False
-        radioNO.Enabled = False
-        cboDiscapacidades.Enabled = False
-        txtCalleDondeVive.Enabled = False
-        txtEntreCalle.Enabled = False
-        txtColonia.Enabled = False
-        txtMunicipio.Enabled = False
-        cboTutor.Enabled = False
-        cboGrupo.Enabled = False
-        txtNumExterior.Enabled = False
-        txtNumInterior.Enabled = False
-        txtYCalle.Enabled = False
-        txtCp.Enabled = False
-        txtLocalidad.Enabled = False
-        txtParentesco.Enabled = False
-        cmdGuardar.Enabled = False
-
-        txtMatricula.Text = ""
-        txtApellidoPaterno.Text = ""
-        txtApellidoMaterno.Text = ""
-        txtNombre.Text = ""
-        txtFNacimiento.Text = ""
-        cboGenero.Text = ""
-        txtTipoSangre.Text = ""
-        txtEntidad.Text = ""
-        txtCurp.Text = ""
-        cboDiscapacidades.Text = ""
-        txtCalleDondeVive.Text = ""
-        txtEntreCalle.Text = ""
-        txtColonia.Text = ""
-        txtMunicipio.Text = ""
-        cboTutor.Text = ""
-        cboGrupo.Text = ""
-        txtNumExterior.Text = ""
-        txtNumInterior.Text = ""
-        txtYCalle.Text = ""
-        txtCp.Text = ""
-        txtLocalidad.Text = ""
-        txtParentesco.Text = ""
-        cmdGuardar.Enabled = False
-        cmdNuevo.Enabled = True
     End Sub
 
+    Private Sub cboTutor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTutor.SelectedIndexChanged
+        If conexionsql.State = ConnectionState.Open Then
+
+            comando.CommandText = "SELECT parentesco FROM Tutores WHERE idTutor = " & cboTutor.SelectedValue
+            lector = comando.ExecuteReader
+            lector.Read()
+            txtParentesco.Text = lector(0)
+            lector.Close()
+        End If
+    End Sub
+
+    Private Sub txtApellidoPaterno_Click(sender As Object, e As EventArgs) Handles txtApellidoPaterno.Click
+        If txtApellidoPaterno.Text.Equals("") Then
+            txtApellidoPaterno.Select(0, 0)
+        Else
+            txtApellidoPaterno.Select(txtApellidoPaterno.Text.Length, 0)
+        End If
+
+    End Sub
 End Class

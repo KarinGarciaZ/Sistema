@@ -58,6 +58,7 @@ Partial Class frmGastos
         '
         'cmdGrabar
         '
+        Me.cmdGrabar.Enabled = False
         Me.cmdGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdGrabar.Location = New System.Drawing.Point(374, 407)
         Me.cmdGrabar.Name = "cmdGrabar"
@@ -137,6 +138,7 @@ Partial Class frmGastos
         '
         Me.txtConcepto.Enabled = False
         Me.txtConcepto.Location = New System.Drawing.Point(514, 73)
+        Me.txtConcepto.Mask = "??????????????????????????????"
         Me.txtConcepto.Name = "txtConcepto"
         Me.txtConcepto.Size = New System.Drawing.Size(342, 20)
         Me.txtConcepto.TabIndex = 9
@@ -167,6 +169,7 @@ Partial Class frmGastos
         '
         'dgGastos
         '
+        Me.dgGastos.AllowUserToAddRows = False
         Me.dgGastos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgGastos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.c, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6})
         Me.dgGastos.Location = New System.Drawing.Point(9, 107)
@@ -223,6 +226,7 @@ Partial Class frmGastos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(871, 472)
         Me.ControlBox = False
         Me.Controls.Add(Me.dgGastos)

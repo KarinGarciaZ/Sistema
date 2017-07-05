@@ -30,7 +30,6 @@ Partial Class frmMenu
         Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TutoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GruposToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EscuelasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscapacidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaterialesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,13 +45,12 @@ Partial Class frmMenu
         Me.EntradaMaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PréstamoMaterialToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GruposToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EscuelaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscapacidadesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PagosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +83,7 @@ Partial Class frmMenu
         '
         'CatálogosToolStripMenuItem
         '
-        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.TutoresToolStripMenuItem, Me.GruposToolStripMenuItem, Me.EscuelasToolStripMenuItem, Me.DiscapacidadesToolStripMenuItem, Me.MaterialesToolStripMenuItem})
+        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem, Me.EmpleadosToolStripMenuItem, Me.TutoresToolStripMenuItem, Me.GruposToolStripMenuItem, Me.DiscapacidadesToolStripMenuItem, Me.MaterialesToolStripMenuItem})
         Me.CatálogosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CatálogosToolStripMenuItem.Name = "CatálogosToolStripMenuItem"
         Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(109, 29)
@@ -118,13 +116,6 @@ Partial Class frmMenu
         Me.GruposToolStripMenuItem.Name = "GruposToolStripMenuItem"
         Me.GruposToolStripMenuItem.Size = New System.Drawing.Size(215, 30)
         Me.GruposToolStripMenuItem.Text = "Grupos"
-        '
-        'EscuelasToolStripMenuItem
-        '
-        Me.EscuelasToolStripMenuItem.Image = Global.SistemaKinder.My.Resources.Resources.botones_01
-        Me.EscuelasToolStripMenuItem.Name = "EscuelasToolStripMenuItem"
-        Me.EscuelasToolStripMenuItem.Size = New System.Drawing.Size(215, 30)
-        Me.EscuelasToolStripMenuItem.Text = "Escuelas"
         '
         'DiscapacidadesToolStripMenuItem
         '
@@ -178,7 +169,7 @@ Partial Class frmMenu
         '
         'ConsultasToolStripMenuItem
         '
-        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem1, Me.EmpleadosToolStripMenuItem1, Me.TutoresToolStripMenuItem1, Me.MaterialToolStripMenuItem, Me.GruposToolStripMenuItem1, Me.EscuelaToolStripMenuItem, Me.DiscapacidadesToolStripMenuItem1, Me.PagosToolStripMenuItem1})
+        Me.ConsultasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AlumnosToolStripMenuItem1, Me.EmpleadosToolStripMenuItem1, Me.TutoresToolStripMenuItem1, Me.MaterialToolStripMenuItem, Me.GruposToolStripMenuItem1, Me.DiscapacidadesToolStripMenuItem1, Me.PagosToolStripMenuItem1})
         Me.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem"
         Me.ConsultasToolStripMenuItem.Size = New System.Drawing.Size(107, 29)
         Me.ConsultasToolStripMenuItem.Text = "Consultas"
@@ -233,19 +224,19 @@ Partial Class frmMenu
         Me.GruposToolStripMenuItem1.Size = New System.Drawing.Size(215, 30)
         Me.GruposToolStripMenuItem1.Text = "Grupos"
         '
-        'EscuelaToolStripMenuItem
-        '
-        Me.EscuelaToolStripMenuItem.Image = Global.SistemaKinder.My.Resources.Resources.botones_01
-        Me.EscuelaToolStripMenuItem.Name = "EscuelaToolStripMenuItem"
-        Me.EscuelaToolStripMenuItem.Size = New System.Drawing.Size(215, 30)
-        Me.EscuelaToolStripMenuItem.Text = "Escuelas"
-        '
         'DiscapacidadesToolStripMenuItem1
         '
         Me.DiscapacidadesToolStripMenuItem1.Image = Global.SistemaKinder.My.Resources.Resources.question_634903_960_720
         Me.DiscapacidadesToolStripMenuItem1.Name = "DiscapacidadesToolStripMenuItem1"
         Me.DiscapacidadesToolStripMenuItem1.Size = New System.Drawing.Size(215, 30)
         Me.DiscapacidadesToolStripMenuItem1.Text = "Discapacidades"
+        '
+        'PagosToolStripMenuItem1
+        '
+        Me.PagosToolStripMenuItem1.Image = Global.SistemaKinder.My.Resources.Resources.receiptofcash_cash_money_4581
+        Me.PagosToolStripMenuItem1.Name = "PagosToolStripMenuItem1"
+        Me.PagosToolStripMenuItem1.Size = New System.Drawing.Size(215, 30)
+        Me.PagosToolStripMenuItem1.Text = "Pagos"
         '
         'Label1
         '
@@ -293,13 +284,6 @@ Partial Class frmMenu
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'PagosToolStripMenuItem1
-        '
-        Me.PagosToolStripMenuItem1.Image = Global.SistemaKinder.My.Resources.Resources.receiptofcash_cash_money_4581
-        Me.PagosToolStripMenuItem1.Name = "PagosToolStripMenuItem1"
-        Me.PagosToolStripMenuItem1.Size = New System.Drawing.Size(215, 30)
-        Me.PagosToolStripMenuItem1.Text = "Pagos"
-        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -333,7 +317,6 @@ Partial Class frmMenu
     Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TutoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GruposToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EscuelasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DiscapacidadesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MaterialesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
@@ -351,7 +334,6 @@ Partial Class frmMenu
     Friend WithEvents TutoresToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents MaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GruposToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents EscuelaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DiscapacidadesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EntradaMaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PréstamoMaterialToolStripMenuItem As ToolStripMenuItem

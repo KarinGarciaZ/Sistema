@@ -126,6 +126,7 @@ Partial Class frmEscuelas
         '
         Me.txtMunicipio.Enabled = False
         Me.txtMunicipio.Location = New System.Drawing.Point(109, 83)
+        Me.txtMunicipio.Mask = "????????????????????????????????????????"
         Me.txtMunicipio.Name = "txtMunicipio"
         Me.txtMunicipio.Size = New System.Drawing.Size(207, 20)
         Me.txtMunicipio.TabIndex = 11
@@ -134,6 +135,7 @@ Partial Class frmEscuelas
         '
         Me.txtNombreConocido.Enabled = False
         Me.txtNombreConocido.Location = New System.Drawing.Point(109, 51)
+        Me.txtNombreConocido.Mask = "????????????????????"
         Me.txtNombreConocido.Name = "txtNombreConocido"
         Me.txtNombreConocido.Size = New System.Drawing.Size(385, 20)
         Me.txtNombreConocido.TabIndex = 10
@@ -142,6 +144,7 @@ Partial Class frmEscuelas
         '
         Me.txtNombreOficial.Enabled = False
         Me.txtNombreOficial.Location = New System.Drawing.Point(109, 19)
+        Me.txtNombreOficial.Mask = "????????????????????????????????????????"
         Me.txtNombreOficial.Name = "txtNombreOficial"
         Me.txtNombreOficial.Size = New System.Drawing.Size(385, 20)
         Me.txtNombreOficial.TabIndex = 9
@@ -158,7 +161,9 @@ Partial Class frmEscuelas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(549, 261)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtCodigo)
         Me.Controls.Add(Me.gbEscuela)
         Me.Controls.Add(Me.Label1)

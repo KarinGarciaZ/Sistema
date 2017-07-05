@@ -22,6 +22,8 @@ Partial Class frmConsPagos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtMatricula = New System.Windows.Forms.MaskedTextBox()
         Me.rbMatricula = New System.Windows.Forms.RadioButton()
@@ -184,12 +186,18 @@ Partial Class frmConsPagos
         '
         'concepto
         '
+        DataGridViewCellStyle1.Format = "d"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.concepto.DefaultCellStyle = DataGridViewCellStyle1
         Me.concepto.HeaderText = "Fecha"
         Me.concepto.Name = "concepto"
         Me.concepto.ReadOnly = True
         '
         'Column1
         '
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column1.HeaderText = "Importe"
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
@@ -207,6 +215,7 @@ Partial Class frmConsPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(727, 384)
         Me.ControlBox = False
         Me.Controls.Add(Me.cmdSalir)
@@ -233,10 +242,10 @@ Partial Class frmConsPagos
     Friend WithEvents rbAlumno As RadioButton
     Friend WithEvents rbID As RadioButton
     Friend WithEvents dgPagos As DataGridView
+    Friend WithEvents cmdSalir As Button
     Friend WithEvents idPrestamo As DataGridViewTextBoxColumn
     Friend WithEvents empleado As DataGridViewTextBoxColumn
     Friend WithEvents fecha As DataGridViewTextBoxColumn
     Friend WithEvents concepto As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents cmdSalir As Button
 End Class

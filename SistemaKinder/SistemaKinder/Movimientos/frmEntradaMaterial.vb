@@ -1,16 +1,16 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmEntradaMaterial
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
-
-
     Private Sub cmdNuevo_Click(sender As Object, e As EventArgs) Handles cmdNuevo.Click
         txtProveedor.Enabled = True
         dtpFecha.Enabled = True
         txtCantidad.Enabled = True
         txtCosto.Enabled = True
         txtBuscar.Enabled = True
+        cmdGrabar.Enabled = True
+        btnAgregar.Enabled = True
         cmdNuevo.Enabled = False
         Dim n As Integer
         comando.CommandText = "select count(*) from EntradaMaterial"
@@ -55,7 +55,7 @@ Public Class frmEntradaMaterial
             txtTotal.Text = ""
             dgAgregar.Rows.Clear()
         Else
-            MsgBox("Asegure poner el proveedor y materiales de compa")
+            MsgBox("Asegure poner el proveedor y materiales de compra")
         End If
 
     End Sub
@@ -89,37 +89,48 @@ Public Class frmEntradaMaterial
 
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        If dgBusqueda.Rows.Count > 0 And Not txtCantidad.Text.Equals("") And Not txtCosto.Text.Equals("") Then
-            Dim pos As Integer = dgBusqueda.Item(0, dgBusqueda.CurrentRow.Index).Value
-            Dim nombre As String = dgBusqueda.Item(1, dgBusqueda.CurrentRow.Index).Value
-            txtSubtotal.Text = CDbl(txtSubtotal.Text) + (CDbl(txtCantidad.Text) * CDbl(txtCosto.Text))
-            txtIVA.Text = CDbl(txtSubtotal.Text) * 0.16
-            txtTotal.Text = CDbl(txtSubtotal.Text) * 1.16
-            dgAgregar.Rows.Add(pos, nombre, txtCantidad.Text, txtCosto.Text, CDbl(txtCantidad.Text) * CDbl(txtCosto.Text))
-            txtCosto.Text = ""
-            txtCantidad.Text = ""
-            txtBuscar.Text = ""
-            dgBusqueda.Rows.Clear()
+        If dgBusqueda.Rows.Count > 0 And Not txtCantidad.Text.Equals("") And IsNumeric(txtCantidad.Text) Then
+            If Not CDbl(txtCantidad.Text) > 2147483647 And Not CDbl(txtCantidad.Text) < 1 Then
+                Dim ban As Boolean = False
+                Dim pos As Integer
+                Dim id As Integer = dgBusqueda.Item(0, dgBusqueda.CurrentRow.Index).Value
+
+                For i = 0 To dgAgregar.Rows.Count - 1
+                    If id = dgAgregar.Item(0, i).Value Then
+                        pos = i
+                        ban = True
+                    End If
+                Next
+
+                If ban = False Then
+                    If Not txtCosto.Text.Equals("") And Not CDbl(txtCosto.Text) < 1 And IsNumeric(txtCosto.Text) And Not CDbl(txtCosto.Text) > 2147483647 Then
+                        Dim nombre As String = dgBusqueda.Item(1, dgBusqueda.CurrentRow.Index).Value
+                        txtSubtotal.Text = CDbl(txtSubtotal.Text) + (CDbl(txtCantidad.Text) * CDbl(txtCosto.Text))
+                        txtIVA.Text = CDbl(txtSubtotal.Text) * 0.16
+                        txtTotal.Text = CDbl(txtSubtotal.Text) * 1.16
+                        dgAgregar.Rows.Add(id, nombre, txtCantidad.Text, txtCosto.Text, CDbl(txtCantidad.Text) * CDbl(txtCosto.Text))
+                        txtCosto.Text = ""
+                        txtCantidad.Text = ""
+                        txtBuscar.Text = ""
+                        dgBusqueda.Rows.Clear()
+                    Else
+                        MsgBox("Agregue el costo del producto.")
+                    End If
+                Else
+                    txtSubtotal.Text = CDbl(txtSubtotal.Text) + (CDbl(txtCantidad.Text) * dgAgregar.Item(3, pos).Value)
+                    txtIVA.Text = CDbl(txtSubtotal.Text) * 0.16
+                    txtTotal.Text = CDbl(txtSubtotal.Text) * 1.16
+                    dgAgregar.Item(2, pos).Value += CDbl(txtCantidad.Text)
+                    dgAgregar.Item(4, pos).Value = dgAgregar.Item(3, pos).Value * dgAgregar.Item(2, pos).Value
+                End If
+            Else
+                MessageBox.Show("No se aceptan valores numericos mayores a 2,147,483,647 ó menores a 1")
+            End If
         Else
-            MsgBox("Asegure llenar los campos y haber seleccionado un material.")
+            MsgBox("Asegure llenar los campos, haber seleccionado un material y que sean los datos numéricos.")
         End If
 
     End Sub
-
-
-    'Private Sub txtCantidad_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCantidad.KeyUp
-    '    If (Not Char.IsNumber(ChrW(e.KeyCode))) Then
-    '        MessageBox.Show("Solo números.")
-    '        txtCantidad.Text = ""
-    '    End If
-    'End Sub
-
-    'Private Sub txtCosto_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCosto.KeyUp
-    '    If (Not Char.IsNumber(ChrW(e.KeyCode))) Then
-    '        MessageBox.Show("Solo números.")
-    '        txtCosto.Text = ""
-    '    End If
-    'End Sub
 
     Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
         If txtCantidad.TextLength > 0 Then
@@ -141,11 +152,31 @@ Public Class frmEntradaMaterial
 
     Private Sub dgBusqueda_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgBusqueda.CellClick
         dgBusqueda.CurrentRow.Selected = True
+        Dim id As Integer = dgBusqueda.Item(0, dgBusqueda.CurrentRow.Index).Value
+        Dim ban As Boolean = False
+        For i = 0 To dgAgregar.Rows.Count - 1
+            If id = dgAgregar.Item(0, i).Value Then
+                ban = True
+            End If
+        Next
+        If ban Then
+            txtCosto.Visible = False
+            lblCosto.Visible = False
+        Else
+            txtCosto.Visible = True
+            lblCosto.Visible = True
+        End If
     End Sub
 
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim total As Double = dgAgregar.Item(4, dgAgregar.CurrentRow.Index).Value
+        txtSubtotal.Text = CDbl(txtSubtotal.Text) - total
+        txtIVA.Text = CDbl(txtSubtotal.Text) * 0.16
+        txtTotal.Text = CDbl(txtSubtotal.Text) * 1.16
+        dgAgregar.Rows.Remove(dgAgregar.SelectedRows(0))
+    End Sub
 
-
-    'Private Sub dgAgregar_SelectionChanged(sender As Object, e As EventArgs) Handles dgAgregar.SelectionChanged
-    '    txt.Text = dgGastos.Item(0, dgGastos.CurrentRow.Index).Value
-    'End Sub
+    Private Sub dgAgregar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgAgregar.CellClick
+        dgAgregar.CurrentRow.Selected = True
+    End Sub
 End Class

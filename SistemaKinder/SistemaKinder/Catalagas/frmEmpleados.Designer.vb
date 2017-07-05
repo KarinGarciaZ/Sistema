@@ -80,32 +80,36 @@ Partial Class frmEmpleados
         Me.txtFechaNacimiento.Mask = "00/00/0000"
         Me.txtFechaNacimiento.Name = "txtFechaNacimiento"
         Me.txtFechaNacimiento.Size = New System.Drawing.Size(117, 20)
-        Me.txtFechaNacimiento.TabIndex = 24
+        Me.txtFechaNacimiento.TabIndex = 8
         Me.txtFechaNacimiento.ValidatingType = GetType(Date)
         '
         'txtNombre
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(84, 72)
+        Me.txtNombre.Mask = "??????????????????????????????"
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(268, 20)
-        Me.txtNombre.TabIndex = 23
+        Me.txtNombre.TabIndex = 6
         '
         'txtApellidoMaterno
         '
         Me.txtApellidoMaterno.Enabled = False
         Me.txtApellidoMaterno.Location = New System.Drawing.Point(112, 45)
+        Me.txtApellidoMaterno.Mask = "???????????????"
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(240, 20)
-        Me.txtApellidoMaterno.TabIndex = 22
+        Me.txtApellidoMaterno.TabIndex = 4
         '
         'txtApellidoPaterno
         '
+        Me.txtApellidoPaterno.BeepOnError = True
         Me.txtApellidoPaterno.Enabled = False
         Me.txtApellidoPaterno.Location = New System.Drawing.Point(112, 19)
+        Me.txtApellidoPaterno.Mask = "???????????????"
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(240, 20)
-        Me.txtApellidoPaterno.TabIndex = 21
+        Me.txtApellidoPaterno.TabIndex = 2
         '
         'Label4
         '
@@ -138,9 +142,10 @@ Partial Class frmEmpleados
         '
         Me.txtNumInterior.Enabled = False
         Me.txtNumInterior.Location = New System.Drawing.Point(282, 159)
+        Me.txtNumInterior.Mask = "CCCCC"
         Me.txtNumInterior.Name = "txtNumInterior"
         Me.txtNumInterior.Size = New System.Drawing.Size(87, 20)
-        Me.txtNumInterior.TabIndex = 32
+        Me.txtNumInterior.TabIndex = 11
         '
         'Label14
         '
@@ -164,9 +169,10 @@ Partial Class frmEmpleados
         '
         Me.txtCalleDondeVive.Enabled = False
         Me.txtCalleDondeVive.Location = New System.Drawing.Point(84, 133)
+        Me.txtCalleDondeVive.Mask = "??????????????????????????????"
         Me.txtCalleDondeVive.Name = "txtCalleDondeVive"
         Me.txtCalleDondeVive.Size = New System.Drawing.Size(285, 20)
-        Me.txtCalleDondeVive.TabIndex = 28
+        Me.txtCalleDondeVive.TabIndex = 9
         '
         'Label1
         '
@@ -181,9 +187,10 @@ Partial Class frmEmpleados
         '
         Me.txtColonia.Enabled = False
         Me.txtColonia.Location = New System.Drawing.Point(84, 190)
+        Me.txtColonia.Mask = "??????????????????????????????"
         Me.txtColonia.Name = "txtColonia"
         Me.txtColonia.Size = New System.Drawing.Size(285, 20)
-        Me.txtColonia.TabIndex = 35
+        Me.txtColonia.TabIndex = 12
         '
         'Label17
         '
@@ -198,9 +205,10 @@ Partial Class frmEmpleados
         '
         Me.txtEmail.Enabled = False
         Me.txtEmail.Location = New System.Drawing.Point(421, 42)
+        Me.txtEmail.Mask = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(271, 20)
-        Me.txtEmail.TabIndex = 39
+        Me.txtEmail.TabIndex = 5
         '
         'txtTelefono
         '
@@ -209,7 +217,7 @@ Partial Class frmEmpleados
         Me.txtTelefono.Mask = "(999)000-0000"
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(116, 20)
-        Me.txtTelefono.TabIndex = 38
+        Me.txtTelefono.TabIndex = 3
         '
         'Label18
         '
@@ -257,7 +265,7 @@ Partial Class frmEmpleados
         Me.cboPuesto.Location = New System.Drawing.Point(421, 70)
         Me.cboPuesto.Name = "cboPuesto"
         Me.cboPuesto.Size = New System.Drawing.Size(271, 21)
-        Me.cboPuesto.TabIndex = 42
+        Me.cboPuesto.TabIndex = 7
         '
         'Label7
         '
@@ -272,9 +280,10 @@ Partial Class frmEmpleados
         '
         Me.txtNumExterior.Enabled = False
         Me.txtNumExterior.Location = New System.Drawing.Point(84, 164)
+        Me.txtNumExterior.Mask = "CCCCC"
         Me.txtNumExterior.Name = "txtNumExterior"
         Me.txtNumExterior.Size = New System.Drawing.Size(87, 20)
-        Me.txtNumExterior.TabIndex = 31
+        Me.txtNumExterior.TabIndex = 10
         '
         'txtIdEmpleado
         '
@@ -282,7 +291,7 @@ Partial Class frmEmpleados
         Me.txtIdEmpleado.Location = New System.Drawing.Point(615, 18)
         Me.txtIdEmpleado.Name = "txtIdEmpleado"
         Me.txtIdEmpleado.Size = New System.Drawing.Size(95, 20)
-        Me.txtIdEmpleado.TabIndex = 44
+        Me.txtIdEmpleado.TabIndex = 1
         '
         'GroupBox1
         '
@@ -330,6 +339,7 @@ Partial Class frmEmpleados
         '
         'cmdGuardar
         '
+        Me.cmdGuardar.Enabled = False
         Me.cmdGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdGuardar.Location = New System.Drawing.Point(273, 266)
         Me.cmdGuardar.Name = "cmdGuardar"
@@ -352,7 +362,9 @@ Partial Class frmEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(721, 325)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.cmdGuardar)
         Me.Controls.Add(Me.cmdNuevo)

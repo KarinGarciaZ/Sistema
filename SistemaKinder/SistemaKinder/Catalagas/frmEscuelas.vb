@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmEscuelas
 
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
 
@@ -23,25 +23,39 @@ Public Class frmEscuelas
     End Sub
 
     Private Sub cmdGuardar_Click(sender As Object, e As EventArgs) Handles cmdGuardar.Click
-        Dim cod As Integer = txtCodigo.Text
-        Dim ofi As String = txtNombreOficial.Text
-        Dim nom As String = txtNombreConocido.Text
-        Dim mun As String = txtMunicipio.Text
+        If Not txtNombreOficial.Text.Equals("") And Not txtNombreOficial.Text.Contains("'") Then
+            If Not txtNombreConocido.Text.Contains("'") Then
+                If Not txtMunicipio.Text.Equals("") And Not txtMunicipio.Text.Contains("'") Then
+                    Dim cod As Integer = txtCodigo.Text
+                    Dim ofi As String = txtNombreOficial.Text
+                    Dim nom As String = txtNombreConocido.Text
+                    Dim mun As String = txtMunicipio.Text
 
-        Dim R As String
-        R = "INSERT INTO Escuelas(codigo, nombreOficial, nombreConocido, Municipio) VALUES(" & cod & ",'" & ofi & "','" & nom & "','" & mun & "')"
-        comando.CommandText = R
-        comando.ExecuteNonQuery()
+                    Dim R As String
+                    R = "INSERT INTO Escuelas(codigo, nombreOficial, nombreConocido, Municipio) VALUES(" & cod & ",'" & ofi & "','" & nom & "','" & mun & "')"
+                    comando.CommandText = R
+                    comando.ExecuteNonQuery()
 
-        txtCodigo.Text = ""
-        txtNombreOficial.Text = ""
-        txtNombreConocido.Text = ""
-        txtMunicipio.Text = ""
-        txtNombreOficial.Enabled = False
-        txtNombreConocido.Enabled = False
-        txtMunicipio.Enabled = False
-        cmdGuardar.Enabled = False
-        cmdNuevo.Enabled = True
+                    txtCodigo.Text = ""
+                    txtNombreOficial.Text = ""
+                    txtNombreConocido.Text = ""
+                    txtMunicipio.Text = ""
+                    txtNombreOficial.Enabled = False
+                    txtNombreConocido.Enabled = False
+                    txtMunicipio.Enabled = False
+                    cmdGuardar.Enabled = False
+                    cmdNuevo.Enabled = True
+                Else
+                    MessageBox.Show("Introduzca un valor válido para nombre oficial")
+                End If
+            Else
+                MessageBox.Show("Introduzca un valor válido para nombre conocido")
+            End If
+        Else
+            MessageBox.Show("Introduzca un valor válido para nombre oficial")
+        End If
+
+
 
     End Sub
 

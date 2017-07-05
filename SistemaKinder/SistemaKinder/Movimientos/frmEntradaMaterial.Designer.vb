@@ -22,6 +22,10 @@ Partial Class frmEntradaMaterial
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -49,7 +53,7 @@ Partial Class frmEntradaMaterial
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtCosto = New System.Windows.Forms.MaskedTextBox()
         Me.txtCantidad = New System.Windows.Forms.MaskedTextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblCosto = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.dgAgregar = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,6 +61,7 @@ Partial Class frmEntradaMaterial
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.dgBusqueda, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,6 +166,7 @@ Partial Class frmEntradaMaterial
         '
         Me.txtProveedor.Enabled = False
         Me.txtProveedor.Location = New System.Drawing.Point(91, 12)
+        Me.txtProveedor.Mask = "????????????????????????????????????????"
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.Size = New System.Drawing.Size(385, 20)
         Me.txtProveedor.TabIndex = 10
@@ -185,6 +191,7 @@ Partial Class frmEntradaMaterial
         '
         'cmdGrabar
         '
+        Me.cmdGrabar.Enabled = False
         Me.cmdGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdGrabar.Location = New System.Drawing.Point(311, 552)
         Me.cmdGrabar.Name = "cmdGrabar"
@@ -254,6 +261,9 @@ Partial Class frmEntradaMaterial
         '
         'Column4
         '
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle1
         Me.Column4.HeaderText = "Costo"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
@@ -261,6 +271,9 @@ Partial Class frmEntradaMaterial
         '
         'Column7
         '
+        DataGridViewCellStyle2.Format = "d"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.Column7.DefaultCellStyle = DataGridViewCellStyle2
         Me.Column7.HeaderText = "Ultima fecha compra"
         Me.Column7.Name = "Column7"
         '
@@ -269,7 +282,7 @@ Partial Class frmEntradaMaterial
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
         Me.GroupBox1.Controls.Add(Me.txtCosto)
         Me.GroupBox1.Controls.Add(Me.txtCantidad)
-        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.lblCosto)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.dgBusqueda)
         Me.GroupBox1.Controls.Add(Me.txtBuscar)
@@ -282,6 +295,7 @@ Partial Class frmEntradaMaterial
         '
         'btnAgregar
         '
+        Me.btnAgregar.Enabled = False
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.Location = New System.Drawing.Point(586, 120)
         Me.btnAgregar.Name = "btnAgregar"
@@ -306,15 +320,15 @@ Partial Class frmEntradaMaterial
         Me.txtCantidad.Size = New System.Drawing.Size(101, 20)
         Me.txtCantidad.TabIndex = 20
         '
-        'Label8
+        'lblCosto
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(589, 75)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 13)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "Costo:"
+        Me.lblCosto.AutoSize = True
+        Me.lblCosto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCosto.Location = New System.Drawing.Point(589, 75)
+        Me.lblCosto.Name = "lblCosto"
+        Me.lblCosto.Size = New System.Drawing.Size(43, 13)
+        Me.lblCosto.TabIndex = 19
+        Me.lblCosto.Text = "Costo:"
         '
         'Label9
         '
@@ -331,7 +345,7 @@ Partial Class frmEntradaMaterial
         Me.dgAgregar.AllowUserToAddRows = False
         Me.dgAgregar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgAgregar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column5, Me.DataGridViewTextBoxColumn4, Me.Column6})
-        Me.dgAgregar.Location = New System.Drawing.Point(97, 276)
+        Me.dgAgregar.Location = New System.Drawing.Point(163, 276)
         Me.dgAgregar.Name = "dgAgregar"
         Me.dgAgregar.Size = New System.Drawing.Size(565, 190)
         Me.dgAgregar.TabIndex = 19
@@ -358,6 +372,9 @@ Partial Class frmEntradaMaterial
         '
         'DataGridViewTextBoxColumn4
         '
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn4.HeaderText = "Costo"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
@@ -365,16 +382,33 @@ Partial Class frmEntradaMaterial
         '
         'Column6
         '
+        DataGridViewCellStyle4.Format = "C2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle4
         Me.Column6.HeaderText = "Importe"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Image = Global.SistemaKinder.My.Resources.Resources.basurita1
+        Me.btnEliminar.Location = New System.Drawing.Point(12, 276)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(120, 190)
+        Me.btnEliminar.TabIndex = 20
+        Me.btnEliminar.Text = "Quitar"
+        Me.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'frmEntradaMaterial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(773, 601)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.dgAgregar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdSalir)
@@ -428,17 +462,18 @@ Partial Class frmEntradaMaterial
     Friend WithEvents btnAgregar As Button
     Friend WithEvents txtCosto As MaskedTextBox
     Friend WithEvents txtCantidad As MaskedTextBox
-    Friend WithEvents Label8 As Label
+    Friend WithEvents lblCosto As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents dgAgregar As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents btnEliminar As Button
 End Class

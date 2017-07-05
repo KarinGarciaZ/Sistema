@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmGrupos
 
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
 
@@ -17,30 +17,59 @@ Public Class frmGrupos
         txtGeneracion.Enabled = True
         txtNoAlumnos.Enabled = True
         cmdGrabar.Enabled = True
+        cmdNuevo.Enabled = False
 
     End Sub
 
     Private Sub cmdGrabar_Click(sender As Object, e As EventArgs) Handles cmdGrabar.Click
-        Dim idGpo As Integer = txtIdGrupo.Text
-        Dim emp As Integer = cboMaestro.SelectedValue
-        Dim gen As String = txtGeneracion.Text
-        Dim gdo As Integer = cboGrado.Text
-        Dim alu As Integer = txtNoAlumnos.Text
-        Dim gpo As String = cboGrupo.Text
+        If Not txtGeneracion.Text.Equals("") And Not txtGeneracion.Text.Contains("'") Then
+            If IsNumeric(txtNoAlumnos.Text) Then
+                If Not cboGrado.Text.Equals("") Then
+                    If Not cboGrupo.Text.Equals("") Then
+                        If Not CDbl(txtNoAlumnos.Text) > 2147483647 And Not CDbl(txtNoAlumnos.Text) < 1 Then
+                            Dim idGpo As Integer = txtIdGrupo.Text
+                            Dim emp As Integer = cboMaestro.SelectedValue
+                            Dim gen As String = txtGeneracion.Text
+                            Dim gdo As Integer = cboGrado.Text
+                            Dim alu As Integer = txtNoAlumnos.Text
+                            Dim gpo As String = cboGrupo.Text
 
-        Dim R As String
-        R = "INSERT INTO Grupos(idGrupo, idEmpleado, generacion, grado, noAlumnos, grupo) VALUES(" & idGpo & "," & emp & ",'" & gen & "'," & gdo & "," & alu & ",'" & gpo & "')"
-        comando.CommandText = R
-        comando.ExecuteNonQuery()
+                            Dim R As String
+                            R = "INSERT INTO Grupos(idGrupo, idEmpleado, generacion, grado, noAlumnos, grupo) VALUES(" & idGpo & "," & emp & ",'" & gen & "'," & gdo & "," & alu & ",'" & gpo & "')"
+                            comando.CommandText = R
+                            comando.ExecuteNonQuery()
 
-        cmdGrabar.Enabled = False
-        cmdNuevo.Enabled = True
-        txtIdGrupo.Text = ""
-        txtGeneracion.Text = ""
-        txtNoAlumnos.Text = ""
-        cboGrado.Text = ""
-        cboGrupo.Text = ""
-        cboMaestro.Text = ""
+                            cmdGrabar.Enabled = False
+                            cmdNuevo.Enabled = True
+                            txtIdGrupo.Text = ""
+                            txtGeneracion.Text = ""
+                            txtNoAlumnos.Text = ""
+                            cboGrado.Text = ""
+                            cboGrupo.Text = ""
+                            cboMaestro.Text = ""
+                            txtIdGrupo.Enabled = False
+                            txtGeneracion.Enabled = False
+                            txtNoAlumnos.Enabled = False
+                            cboGrado.Enabled = False
+                            cboGrupo.Enabled = False
+                        Else
+                            MessageBox.Show("No se aceptan valores numericos mayores a 2,147,483,647 ó menores a 1")
+                        End If
+
+                    Else
+                        MessageBox.Show("Introduzca un valor válido para grupo")
+                    End If
+                Else
+                    MessageBox.Show("Introduzca un valor válido para grado")
+                End If
+            Else
+                MessageBox.Show("Introduzca un valor válido para generación")
+            End If
+        Else
+            MessageBox.Show("Introduzca un valor válido para generación")
+        End If
+
+
     End Sub
 
     Private Sub cmdSalir_Click(sender As Object, e As EventArgs) Handles cmdSalir.Click

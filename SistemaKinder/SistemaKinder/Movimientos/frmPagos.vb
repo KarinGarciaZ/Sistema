@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmPagos
-    Dim conexionsql As New SqlConnection("Data Source = 'KARINSPC'; Initial catalog = 'bdKinder'; Integrated security = 'true'")
+    Dim conexionsql As SqlConnection = openConection()
     Dim comando As SqlCommand = conexionsql.CreateCommand
     Dim lector As SqlDataReader
     Private Sub txtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
@@ -38,26 +38,31 @@ Public Class frmPagos
     End Sub
 
     Private Sub cmdGrabar_Click(sender As Object, e As EventArgs) Handles cmdGrabar.Click
-        If Not txtMatricula.Text.Equals("") And Not txtConcepto.Text.Equals("") And Not txtImporte.Text.Equals("") Then
-            comando.CommandText = "insert into Pagos values(" & txtIdPago.Text & ", " & txtMatricula.Text & ", '" & txtConcepto.Text & "','" & dtpFecha.Value.Date & "'," & txtImporte.Text & ")"
-            comando.ExecuteNonQuery()
-            dgBusqueda.Rows.Clear()
-            txtBuscar.Enabled = False
-            dtpFecha.Enabled = False
-            txtConcepto.Enabled = False
-            txtImporte.Enabled = False
-            cmdGrabar.Enabled = False
-            cmdNuevo.Enabled = True
-            dgBusqueda.Rows.Clear()
-            txtConcepto.Text = ""
-            txtBuscar.Text = ""
-            txtImporte.Text = ""
-            txtIdPago.Text = ""
-            txtMatricula.Text = ""
-            txtGrupo.Text = ""
-            txtTutor.Text = ""
+        If Not txtMatricula.Text.Equals("") And Not txtConcepto.Text.Equals("") And Not txtImporte.Text.Equals("") And IsNumeric(txtImporte.Text) Then
+            If Not CDbl(txtImporte.Text) > 2147483647 And Not CDbl(txtImporte.Text) < 0 Then
+
+                comando.CommandText = "insert into Pagos values(" & txtIdPago.Text & ", " & txtMatricula.Text & ", '" & txtConcepto.Text & "','" & dtpFecha.Value.Date & "'," & txtImporte.Text & ")"
+                comando.ExecuteNonQuery()
+                dgBusqueda.Rows.Clear()
+                txtBuscar.Enabled = False
+                dtpFecha.Enabled = False
+                txtConcepto.Enabled = False
+                txtImporte.Enabled = False
+                cmdGrabar.Enabled = False
+                cmdNuevo.Enabled = True
+                dgBusqueda.Rows.Clear()
+                txtConcepto.Text = ""
+                txtBuscar.Text = ""
+                txtImporte.Text = ""
+                txtIdPago.Text = ""
+                txtMatricula.Text = ""
+                txtGrupo.Text = ""
+                txtTutor.Text = ""
+            Else
+                MessageBox.Show("No se aceptan valores numericos mayores a 922,337,203,685,477 ó menores a 0")
+            End If
         Else
-            MsgBox("Llene todos los campos.")
+                MsgBox("Llene todos los campos correctamente.")
         End If
     End Sub
 

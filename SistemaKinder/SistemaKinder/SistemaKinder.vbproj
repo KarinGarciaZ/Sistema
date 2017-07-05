@@ -77,6 +77,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdKinderDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Modulo.vb" />
     <Compile Include="Consultas\frmConsAlumnos.Designer.vb">
       <DependentUpon>frmConsAlumnos.vb</DependentUpon>
     </Compile>
@@ -388,6 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cash_icon-icons.com_51090.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basurita.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

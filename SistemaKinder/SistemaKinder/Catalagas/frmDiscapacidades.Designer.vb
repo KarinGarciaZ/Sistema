@@ -68,6 +68,7 @@ Partial Class frmDiscapacidades
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(64, 27)
+        Me.txtNombre.Mask = "????????????????????????????????????????"
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(340, 20)
         Me.txtNombre.TabIndex = 2
@@ -84,6 +85,7 @@ Partial Class frmDiscapacidades
         '
         'cmdGrabar
         '
+        Me.cmdGrabar.Enabled = False
         Me.cmdGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdGrabar.Location = New System.Drawing.Point(170, 152)
         Me.cmdGrabar.Name = "cmdGrabar"
@@ -114,7 +116,9 @@ Partial Class frmDiscapacidades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(440, 204)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtIdDiscapacidad)
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.cmdGrabar)

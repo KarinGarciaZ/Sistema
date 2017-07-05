@@ -35,17 +35,17 @@ Partial Class frmConsGrupos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cboGrupo = New System.Windows.Forms.ComboBox()
+        Me.GruposBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BdKinderDataSet = New SistemaKinder.bdKinderDataSet()
         Me.cboGrado = New System.Windows.Forms.ComboBox()
+        Me.GruposBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtMaestro = New System.Windows.Forms.MaskedTextBox()
         Me.txtGeneracion = New System.Windows.Forms.MaskedTextBox()
         Me.txtTotalAlumnos = New System.Windows.Forms.MaskedTextBox()
-        Me.BdKinderDataSet = New SistemaKinder.bdKinderDataSet()
-        Me.GruposBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GruposTableAdapter = New SistemaKinder.bdKinderDataSetTableAdapters.GruposTableAdapter()
-        Me.GruposBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.dgGrupos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GruposBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GruposBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -150,27 +150,38 @@ Partial Class frmConsGrupos
         '
         'cboGrupo
         '
-        Me.cboGrupo.DataSource = Me.GruposBindingSource
-        Me.cboGrupo.DisplayMember = "grupo"
         Me.cboGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGrupo.FormattingEnabled = True
+        Me.cboGrupo.Items.AddRange(New Object() {"A", "B"})
         Me.cboGrupo.Location = New System.Drawing.Point(72, 18)
         Me.cboGrupo.Name = "cboGrupo"
         Me.cboGrupo.Size = New System.Drawing.Size(121, 21)
         Me.cboGrupo.TabIndex = 10
-        Me.cboGrupo.ValueMember = "grupo"
+        '
+        'GruposBindingSource
+        '
+        Me.GruposBindingSource.DataMember = "Grupos"
+        Me.GruposBindingSource.DataSource = Me.BdKinderDataSet
+        '
+        'BdKinderDataSet
+        '
+        Me.BdKinderDataSet.DataSetName = "bdKinderDataSet"
+        Me.BdKinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'cboGrado
         '
-        Me.cboGrado.DataSource = Me.GruposBindingSource1
-        Me.cboGrado.DisplayMember = "grado"
         Me.cboGrado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGrado.FormattingEnabled = True
+        Me.cboGrado.Items.AddRange(New Object() {"2", "3"})
         Me.cboGrado.Location = New System.Drawing.Point(278, 18)
         Me.cboGrado.Name = "cboGrado"
         Me.cboGrado.Size = New System.Drawing.Size(121, 21)
         Me.cboGrado.TabIndex = 11
-        Me.cboGrado.ValueMember = "grado"
+        '
+        'GruposBindingSource1
+        '
+        Me.GruposBindingSource1.DataMember = "Grupos"
+        Me.GruposBindingSource1.DataSource = Me.BdKinderDataSet
         '
         'txtMaestro
         '
@@ -196,30 +207,17 @@ Partial Class frmConsGrupos
         Me.txtTotalAlumnos.Size = New System.Drawing.Size(121, 20)
         Me.txtTotalAlumnos.TabIndex = 14
         '
-        'BdKinderDataSet
-        '
-        Me.BdKinderDataSet.DataSetName = "bdKinderDataSet"
-        Me.BdKinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'GruposBindingSource
-        '
-        Me.GruposBindingSource.DataMember = "Grupos"
-        Me.GruposBindingSource.DataSource = Me.BdKinderDataSet
-        '
         'GruposTableAdapter
         '
         Me.GruposTableAdapter.ClearBeforeFill = True
-        '
-        'GruposBindingSource1
-        '
-        Me.GruposBindingSource1.DataMember = "Grupos"
-        Me.GruposBindingSource1.DataSource = Me.BdKinderDataSet
         '
         'frmConsGrupos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(636, 356)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtTotalAlumnos)
         Me.Controls.Add(Me.txtGeneracion)
         Me.Controls.Add(Me.txtMaestro)
@@ -236,8 +234,8 @@ Partial Class frmConsGrupos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CONSULTA DE GRUPOS"
         CType(Me.dgGrupos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GruposBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GruposBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -22,6 +22,8 @@ Partial Class frmConsPrestamo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgPrestamo = New System.Windows.Forms.DataGridView()
         Me.idPrestamo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.empleado = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -73,12 +75,18 @@ Partial Class frmConsPrestamo
         '
         'fecha
         '
+        DataGridViewCellStyle1.Format = "d"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.fecha.DefaultCellStyle = DataGridViewCellStyle1
         Me.fecha.HeaderText = "Fecha"
         Me.fecha.Name = "fecha"
         Me.fecha.ReadOnly = True
         '
         'concepto
         '
+        DataGridViewCellStyle2.Format = "C2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.concepto.DefaultCellStyle = DataGridViewCellStyle2
         Me.concepto.HeaderText = "Concepto"
         Me.concepto.Name = "concepto"
         Me.concepto.ReadOnly = True
@@ -214,6 +222,7 @@ Partial Class frmConsPrestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(695, 560)
         Me.ControlBox = False
         Me.Controls.Add(Me.dgDetalle)
@@ -240,12 +249,12 @@ Partial Class frmConsPrestamo
     Friend WithEvents rbFecha As RadioButton
     Friend WithEvents rbEmpleado As RadioButton
     Friend WithEvents rbID As RadioButton
-    Friend WithEvents idPrestamo As DataGridViewTextBoxColumn
-    Friend WithEvents empleado As DataGridViewTextBoxColumn
-    Friend WithEvents fecha As DataGridViewTextBoxColumn
-    Friend WithEvents concepto As DataGridViewTextBoxColumn
     Friend WithEvents dgDetalle As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents idPrestamo As DataGridViewTextBoxColumn
+    Friend WithEvents empleado As DataGridViewTextBoxColumn
+    Friend WithEvents fecha As DataGridViewTextBoxColumn
+    Friend WithEvents concepto As DataGridViewTextBoxColumn
 End Class

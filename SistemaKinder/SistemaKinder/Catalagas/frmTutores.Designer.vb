@@ -126,6 +126,7 @@ Partial Class frmTutores
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(462, 192)
+        Me.txtEmail.Mask = "??????????????????????????????"
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(261, 20)
         Me.txtEmail.TabIndex = 35
@@ -306,6 +307,7 @@ Partial Class frmTutores
         'txtEntidad
         '
         Me.txtEntidad.Location = New System.Drawing.Point(87, 134)
+        Me.txtEntidad.Mask = "????????????????????"
         Me.txtEntidad.Name = "txtEntidad"
         Me.txtEntidad.Size = New System.Drawing.Size(267, 20)
         Me.txtEntidad.TabIndex = 13
@@ -340,6 +342,7 @@ Partial Class frmTutores
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(68, 77)
+        Me.txtNombre.Mask = "??????????????????????????????"
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(285, 20)
         Me.txtNombre.TabIndex = 10
@@ -347,6 +350,7 @@ Partial Class frmTutores
         'txtApellidoMaterno
         '
         Me.txtApellidoMaterno.Location = New System.Drawing.Point(104, 50)
+        Me.txtApellidoMaterno.Mask = "???????????????"
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(248, 20)
         Me.txtApellidoMaterno.TabIndex = 9
@@ -354,6 +358,7 @@ Partial Class frmTutores
         'txtApellidoPaterno
         '
         Me.txtApellidoPaterno.Location = New System.Drawing.Point(104, 24)
+        Me.txtApellidoPaterno.Mask = "???????????????"
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(248, 20)
         Me.txtApellidoPaterno.TabIndex = 8
@@ -406,6 +411,7 @@ Partial Class frmTutores
         '
         'cmdGuardar
         '
+        Me.cmdGuardar.Enabled = False
         Me.cmdGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdGuardar.Location = New System.Drawing.Point(287, 268)
         Me.cmdGuardar.Name = "cmdGuardar"
@@ -436,7 +442,9 @@ Partial Class frmTutores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(751, 318)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtIdTutor)
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.cmdGuardar)

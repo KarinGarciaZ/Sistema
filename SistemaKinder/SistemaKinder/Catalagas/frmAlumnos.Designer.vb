@@ -139,6 +139,7 @@ Partial Class frmAlumnos
         '
         Me.txtTipoSangre.Enabled = False
         Me.txtTipoSangre.Location = New System.Drawing.Point(111, 162)
+        Me.txtTipoSangre.Mask = "CCC"
         Me.txtTipoSangre.Name = "txtTipoSangre"
         Me.txtTipoSangre.Size = New System.Drawing.Size(94, 20)
         Me.txtTipoSangre.TabIndex = 33
@@ -189,6 +190,7 @@ Partial Class frmAlumnos
         'radioNO
         '
         Me.radioNO.AutoSize = True
+        Me.radioNO.Checked = True
         Me.radioNO.Enabled = False
         Me.radioNO.Location = New System.Drawing.Point(472, 101)
         Me.radioNO.Name = "radioNO"
@@ -206,7 +208,6 @@ Partial Class frmAlumnos
         Me.radioSI.Name = "radioSI"
         Me.radioSI.Size = New System.Drawing.Size(36, 17)
         Me.radioSI.TabIndex = 17
-        Me.radioSI.TabStop = True
         Me.radioSI.Text = "Si"
         Me.radioSI.UseVisualStyleBackColor = True
         '
@@ -234,6 +235,7 @@ Partial Class frmAlumnos
         '
         Me.txtCurp.Enabled = False
         Me.txtCurp.Location = New System.Drawing.Point(401, 50)
+        Me.txtCurp.Mask = "????999999??????99"
         Me.txtCurp.Name = "txtCurp"
         Me.txtCurp.Size = New System.Drawing.Size(282, 20)
         Me.txtCurp.TabIndex = 11
@@ -260,6 +262,7 @@ Partial Class frmAlumnos
         '
         Me.txtEntidad.Enabled = False
         Me.txtEntidad.Location = New System.Drawing.Point(503, 24)
+        Me.txtEntidad.Mask = "????????????????????"
         Me.txtEntidad.Name = "txtEntidad"
         Me.txtEntidad.Size = New System.Drawing.Size(180, 20)
         Me.txtEntidad.TabIndex = 13
@@ -296,6 +299,7 @@ Partial Class frmAlumnos
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Location = New System.Drawing.Point(68, 77)
+        Me.txtNombre.Mask = "??????????????????????????????"
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(285, 20)
         Me.txtNombre.TabIndex = 10
@@ -304,6 +308,7 @@ Partial Class frmAlumnos
         '
         Me.txtApellidoMaterno.Enabled = False
         Me.txtApellidoMaterno.Location = New System.Drawing.Point(104, 50)
+        Me.txtApellidoMaterno.Mask = "???????????????"
         Me.txtApellidoMaterno.Name = "txtApellidoMaterno"
         Me.txtApellidoMaterno.Size = New System.Drawing.Size(248, 20)
         Me.txtApellidoMaterno.TabIndex = 9
@@ -312,6 +317,7 @@ Partial Class frmAlumnos
         '
         Me.txtApellidoPaterno.Enabled = False
         Me.txtApellidoPaterno.Location = New System.Drawing.Point(104, 24)
+        Me.txtApellidoPaterno.Mask = "???????????????"
         Me.txtApellidoPaterno.Name = "txtApellidoPaterno"
         Me.txtApellidoPaterno.Size = New System.Drawing.Size(248, 20)
         Me.txtApellidoPaterno.TabIndex = 8
@@ -401,6 +407,7 @@ Partial Class frmAlumnos
         '
         Me.txtLocalidad.Enabled = False
         Me.txtLocalidad.Location = New System.Drawing.Point(427, 113)
+        Me.txtLocalidad.Mask = "?????????????????????????"
         Me.txtLocalidad.Name = "txtLocalidad"
         Me.txtLocalidad.Size = New System.Drawing.Size(248, 20)
         Me.txtLocalidad.TabIndex = 36
@@ -409,6 +416,7 @@ Partial Class frmAlumnos
         '
         Me.txtCp.Enabled = False
         Me.txtCp.Location = New System.Drawing.Point(427, 83)
+        Me.txtCp.Mask = "00000"
         Me.txtCp.Name = "txtCp"
         Me.txtCp.Size = New System.Drawing.Size(88, 20)
         Me.txtCp.TabIndex = 35
@@ -417,6 +425,7 @@ Partial Class frmAlumnos
         '
         Me.txtMunicipio.Enabled = False
         Me.txtMunicipio.Location = New System.Drawing.Point(104, 113)
+        Me.txtMunicipio.Mask = "?????????????????????????"
         Me.txtMunicipio.Name = "txtMunicipio"
         Me.txtMunicipio.Size = New System.Drawing.Size(248, 20)
         Me.txtMunicipio.TabIndex = 34
@@ -425,6 +434,7 @@ Partial Class frmAlumnos
         '
         Me.txtColonia.Enabled = False
         Me.txtColonia.Location = New System.Drawing.Point(104, 79)
+        Me.txtColonia.Mask = "?????????????????????????"
         Me.txtColonia.Name = "txtColonia"
         Me.txtColonia.Size = New System.Drawing.Size(248, 20)
         Me.txtColonia.TabIndex = 33
@@ -469,6 +479,7 @@ Partial Class frmAlumnos
         '
         Me.txtYCalle.Enabled = False
         Me.txtYCalle.Location = New System.Drawing.Point(427, 52)
+        Me.txtYCalle.Mask = "?????????????????????????"
         Me.txtYCalle.Name = "txtYCalle"
         Me.txtYCalle.Size = New System.Drawing.Size(248, 20)
         Me.txtYCalle.TabIndex = 28
@@ -486,6 +497,7 @@ Partial Class frmAlumnos
         '
         Me.txtEntreCalle.Enabled = False
         Me.txtEntreCalle.Location = New System.Drawing.Point(104, 52)
+        Me.txtEntreCalle.Mask = "?????????????????????????"
         Me.txtEntreCalle.Name = "txtEntreCalle"
         Me.txtEntreCalle.Size = New System.Drawing.Size(248, 20)
         Me.txtEntreCalle.TabIndex = 26
@@ -503,6 +515,7 @@ Partial Class frmAlumnos
         '
         Me.txtNumInterior.Enabled = False
         Me.txtNumInterior.Location = New System.Drawing.Point(600, 26)
+        Me.txtNumInterior.Mask = "CCCCC"
         Me.txtNumInterior.Name = "txtNumInterior"
         Me.txtNumInterior.Size = New System.Drawing.Size(75, 20)
         Me.txtNumInterior.TabIndex = 24
@@ -511,6 +524,7 @@ Partial Class frmAlumnos
         '
         Me.txtNumExterior.Enabled = False
         Me.txtNumExterior.Location = New System.Drawing.Point(439, 26)
+        Me.txtNumExterior.Mask = "CCCCC"
         Me.txtNumExterior.Name = "txtNumExterior"
         Me.txtNumExterior.Size = New System.Drawing.Size(76, 20)
         Me.txtNumExterior.TabIndex = 23
@@ -537,6 +551,7 @@ Partial Class frmAlumnos
         '
         Me.txtCalleDondeVive.Enabled = False
         Me.txtCalleDondeVive.Location = New System.Drawing.Point(122, 26)
+        Me.txtCalleDondeVive.Mask = "?????????????????????????"
         Me.txtCalleDondeVive.Name = "txtCalleDondeVive"
         Me.txtCalleDondeVive.Size = New System.Drawing.Size(230, 20)
         Me.txtCalleDondeVive.TabIndex = 20
@@ -671,8 +686,10 @@ Partial Class frmAlumnos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(704, 486)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cboGrupo)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.txtParentesco)

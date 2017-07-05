@@ -222,6 +222,7 @@ Partial Class frmMateriales
         'txtDescripcion
         '
         Me.txtDescripcion.Location = New System.Drawing.Point(78, 19)
+        Me.txtDescripcion.Mask = "??????????????????????????????????????????????????"
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(260, 20)
         Me.txtDescripcion.TabIndex = 13
@@ -238,7 +239,9 @@ Partial Class frmMateriales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(622, 261)
+        Me.ControlBox = False
         Me.Controls.Add(Me.txtIdMaterial)
         Me.Controls.Add(Me.gbMaterial)
         Me.Controls.Add(Me.cmdSalir)

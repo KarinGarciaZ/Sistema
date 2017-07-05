@@ -29,6 +29,7 @@ Partial Class frmConsAlumnos
         Me.apm = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdSalir = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
         CType(Me.dgAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,11 +92,22 @@ Partial Class frmConsAlumnos
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Total de Alumnos:"
         '
+        'txtTotal
+        '
+        Me.txtTotal.Enabled = False
+        Me.txtTotal.Location = New System.Drawing.Point(588, 17)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(36, 20)
+        Me.txtTotal.TabIndex = 3
+        '
         'frmConsAlumnos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(637, 300)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdSalir)
         Me.Controls.Add(Me.dgAlumnos)
@@ -115,4 +127,5 @@ Partial Class frmConsAlumnos
     Friend WithEvents app As DataGridViewTextBoxColumn
     Friend WithEvents apm As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtTotal As TextBox
 End Class

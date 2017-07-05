@@ -149,6 +149,7 @@ Partial Class frmPagos
         '
         Me.txtConcepto.Enabled = False
         Me.txtConcepto.Location = New System.Drawing.Point(262, 32)
+        Me.txtConcepto.Mask = "???????????????"
         Me.txtConcepto.Name = "txtConcepto"
         Me.txtConcepto.Size = New System.Drawing.Size(380, 20)
         Me.txtConcepto.TabIndex = 17
@@ -343,6 +344,7 @@ Partial Class frmPagos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(686, 452)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox2)

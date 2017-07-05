@@ -149,7 +149,9 @@ Partial Class frmConsEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(739, 327)
+        Me.ControlBox = False
         Me.Controls.Add(Me.cboPuesto)
         Me.Controls.Add(Me.radioGeneral)
         Me.Controls.Add(Me.radioPuesto)
