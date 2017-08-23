@@ -42,9 +42,15 @@ Partial Class frmGrupos
         Me.txtGeneracion = New System.Windows.Forms.MaskedTextBox()
         Me.txtIdGrupo = New System.Windows.Forms.MaskedTextBox()
         Me.EmpleadosTableAdapter = New SistemaKinder.bdKinderDataSetTableAdapters.EmpleadosTableAdapter()
+        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.FillByToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.FillByToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillByToolStrip.SuspendLayout()
+        Me.FillByToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmdNuevo
@@ -148,7 +154,7 @@ Partial Class frmGrupos
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(20, 45)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(476, 103)
+        Me.GroupBox1.Size = New System.Drawing.Size(490, 110)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registro"
@@ -227,6 +233,39 @@ Partial Class frmGrupos
         '
         Me.EmpleadosTableAdapter.ClearBeforeFill = True
         '
+        'FillByToolStrip
+        '
+        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
+        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.FillByToolStrip.Name = "FillByToolStrip"
+        Me.FillByToolStrip.Size = New System.Drawing.Size(518, 25)
+        Me.FillByToolStrip.TabIndex = 16
+        Me.FillByToolStrip.Text = "FillByToolStrip"
+        Me.FillByToolStrip.Visible = False
+        '
+        'FillByToolStripButton
+        '
+        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton.Name = "FillByToolStripButton"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 22)
+        Me.FillByToolStripButton.Text = "FillBy"
+        '
+        'FillByToolStrip1
+        '
+        Me.FillByToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton1})
+        Me.FillByToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.FillByToolStrip1.Name = "FillByToolStrip1"
+        Me.FillByToolStrip1.Size = New System.Drawing.Size(111, 25)
+        Me.FillByToolStrip1.TabIndex = 17
+        Me.FillByToolStrip1.Text = "FillByToolStrip1"
+        '
+        'FillByToolStripButton1
+        '
+        Me.FillByToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton1.Name = "FillByToolStripButton1"
+        Me.FillByToolStripButton1.Size = New System.Drawing.Size(39, 22)
+        Me.FillByToolStripButton1.Text = "FillBy"
+        '
         'frmGrupos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,6 +273,8 @@ Partial Class frmGrupos
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(518, 225)
         Me.ControlBox = False
+        Me.Controls.Add(Me.FillByToolStrip1)
+        Me.Controls.Add(Me.FillByToolStrip)
         Me.Controls.Add(Me.txtIdGrupo)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
@@ -248,6 +289,10 @@ Partial Class frmGrupos
         Me.GroupBox1.PerformLayout()
         CType(Me.EmpleadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BdKinderDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FillByToolStrip.ResumeLayout(False)
+        Me.FillByToolStrip.PerformLayout()
+        Me.FillByToolStrip1.ResumeLayout(False)
+        Me.FillByToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -272,4 +317,8 @@ Partial Class frmGrupos
     Friend WithEvents BdKinderDataSet As bdKinderDataSet
     Friend WithEvents EmpleadosBindingSource As BindingSource
     Friend WithEvents EmpleadosTableAdapter As bdKinderDataSetTableAdapters.EmpleadosTableAdapter
+    Friend WithEvents FillByToolStrip As ToolStrip
+    Friend WithEvents FillByToolStripButton As ToolStripButton
+    Friend WithEvents FillByToolStrip1 As ToolStrip
+    Friend WithEvents FillByToolStripButton1 As ToolStripButton
 End Class

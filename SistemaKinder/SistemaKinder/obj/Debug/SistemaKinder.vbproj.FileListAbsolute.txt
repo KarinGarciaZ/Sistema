@@ -159,3 +159,5 @@ C:\Users\diego_000\Desktop\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.f
 C:\Users\diego_000\Desktop\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmTutores.resources
 C:\Users\diego_000\Desktop\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.Resources.resources
 C:\Users\diego_000\Desktop\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.vbproj.GenerateResource.Cache
+C:\Users\diego_000\Desktop\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmModAlunmos.resources
+C:\Users\diego_000\Desktop\SistemaKinder\SistemaKinder\obj\Debug\SistemaKinder.frmModDiscapacidades.resources

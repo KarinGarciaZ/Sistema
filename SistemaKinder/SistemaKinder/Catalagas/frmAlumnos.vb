@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
 Public Class frmAlumnos
 
     Dim conexionsql As SqlConnection = openConection()
@@ -43,13 +44,15 @@ Public Class frmAlumnos
     End Sub
 
     Private Sub frmAlumnos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Grupos' Puede moverla o quitarla según sea necesario.
-        Me.GruposTableAdapter.Fill(Me.BdKinderDataSet.Grupos)
-        'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Tutores' Puede moverla o quitarla según sea necesario.
-        Me.TutoresTableAdapter.Fill(Me.BdKinderDataSet.Tutores)
+
         'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Discapacidades' Puede moverla o quitarla según sea necesario.
         Me.DiscapacidadesTableAdapter.Fill(Me.BdKinderDataSet.Discapacidades)
+        Me.TutoresTableAdapter.Fill(Me.BdKinderDataSet.Tutores)
+        Me.GruposTableAdapter.Fill(Me.BdKinderDataSet.Grupos)
+
         conexionsql.Open()
+
+
     End Sub
 
     Private Sub cmdSalir_Click(sender As Object, e As EventArgs) Handles cmdSalir.Click
@@ -182,7 +185,7 @@ Public Class frmAlumnos
                                                                             End If
 
                                                                         Else
-                                                                                MessageBox.Show("La matrícula debe ser un valor numerico")
+                                                                            MessageBox.Show("La matrícula debe ser un valor numerico")
                                                                         End If
                                                                     Else
                                                                         MessageBox.Show("Introduzca un valor válido para tipo de sangre")
@@ -234,6 +237,8 @@ Public Class frmAlumnos
         End If
     End Sub
 
+
+
     Private Sub cboTutor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTutor.SelectedIndexChanged
         If conexionsql.State = ConnectionState.Open Then
 
@@ -252,5 +257,163 @@ Public Class frmAlumnos
             txtApellidoPaterno.Select(txtApellidoPaterno.Text.Length, 0)
         End If
 
+    End Sub
+
+    Private Sub txtApellidoMaterno_Click(sender As Object, e As EventArgs) Handles txtApellidoMaterno.Click
+        If txtApellidoMaterno.Text.Equals("") Then
+            txtApellidoMaterno.Select(0, 0)
+        Else
+            txtApellidoMaterno.Select(txtApellidoMaterno.Text.Length, 0)
+        End If
+
+    End Sub
+
+    Private Sub txtNombre_Click(sender As Object, e As EventArgs) Handles txtNombre.Click
+        If txtNombre.Text.Equals("") Then
+            txtNombre.Select(0, 0)
+        Else
+            txtNombre.Select(txtNombre.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtEntidad_Click(sender As Object, e As EventArgs) Handles txtEntidad.Click
+        If txtEntidad.Text.Equals("") Then
+            txtEntidad.Select(0, 0)
+        Else
+            txtEntidad.Select(txtEntidad.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtCurp_Click(sender As Object, e As EventArgs) Handles txtCurp.Click
+        If txtCurp.Text.Equals("") Then
+            txtCurp.Select(0, 0)
+        Else
+            txtCurp.Select(txtCurp.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtTipoSangre_Click(sender As Object, e As EventArgs) Handles txtTipoSangre.Click
+        If txtTipoSangre.Text.Equals("") Then
+            txtTipoSangre.Select(0, 0)
+        Else
+            txtTipoSangre.Select(txtTipoSangre.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtCalleDondeVive_Click(sender As Object, e As EventArgs) Handles txtCalleDondeVive.Click
+        If txtCalleDondeVive.Text.Equals("") Then
+            txtCalleDondeVive.Select(0, 0)
+        Else
+            txtCalleDondeVive.Select(txtCalleDondeVive.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtNumExterior_Click(sender As Object, e As EventArgs) Handles txtNumExterior.Click
+        If txtNumExterior.Text.Equals("") Then
+            txtNumExterior.Select(0, 0)
+        Else
+            txtNumExterior.Select(txtNumExterior.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtNumInterior_Click(sender As Object, e As EventArgs) Handles txtNumInterior.Click
+        If txtNumInterior.Text.Equals("") Then
+            txtNumInterior.Select(0, 0)
+        Else
+            txtNumInterior.Select(txtNumInterior.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtEntreCalle_Click(sender As Object, e As EventArgs) Handles txtEntreCalle.Click
+        If txtEntreCalle.Text.Equals("") Then
+            txtEntreCalle.Select(0, 0)
+        Else
+            txtEntreCalle.Select(txtEntreCalle.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtYCalle_Click(sender As Object, e As EventArgs) Handles txtYCalle.Click
+        If txtYCalle.Text.Equals("") Then
+            txtYCalle.Select(0, 0)
+        Else
+            txtYCalle.Select(txtYCalle.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtColonia_Click(sender As Object, e As EventArgs) Handles txtColonia.Click
+        If txtColonia.Text.Equals("") Then
+            txtColonia.Select(0, 0)
+        Else
+            txtColonia.Select(txtColonia.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtCp_Click(sender As Object, e As EventArgs) Handles txtCp.Click
+        If txtCp.Text.Equals("") Then
+            txtCp.Select(0, 0)
+        Else
+            txtCp.Select(txtCp.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtMunicipio_Click(sender As Object, e As EventArgs) Handles txtMunicipio.Click
+        If txtMunicipio.Text.Equals("") Then
+            txtMunicipio.Select(0, 0)
+        Else
+            txtMunicipio.Select(txtMunicipio.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub txtLocalidad_Click(sender As Object, e As EventArgs) Handles txtLocalidad.Click
+        If txtLocalidad.Text.Equals("") Then
+            txtLocalidad.Select(0, 0)
+        Else
+            txtLocalidad.Select(txtLocalidad.Text.Length, 0)
+        End If
+    End Sub
+
+    Private Sub cboTutor_Validating(sender As Object, e As CancelEventArgs) Handles cboTutor.Validating
+
+        Dim cont As Integer = 0
+        Dim R As String
+        Dim ban As Boolean = False
+        R = "SELECT Tutores.nombre FROM Tutores"
+        comando.CommandText = R
+        lector = comando.ExecuteReader
+
+        While lector.Read
+            If cboTutor.Text.Equals(lector(0)) Then
+                ban = True
+            End If
+
+        End While
+        lector.Close()
+
+        If Not ban Then
+            MessageBox.Show("Seleccione un nombre de la lista")
+            cboTutor.Focus()
+        End If
+    End Sub
+
+    Private Sub cboGrupo_Validating(sender As Object, e As CancelEventArgs) Handles cboGrupo.Validating
+
+        Dim R As String
+        Dim ban As Boolean = False
+        R = "SELECT Grupos.generacion FROM Grupos"
+        comando.CommandText = R
+        lector = comando.ExecuteReader
+
+        While lector.Read
+            If cboGrupo.Text.Equals(lector(0)) Then
+                ban = True
+            End If
+
+        End While
+        lector.Close()
+
+        If Not ban Then
+            MessageBox.Show("Seleccione un grupo de la lista")
+            cboGrupo.Focus()
+        End If
     End Sub
 End Class

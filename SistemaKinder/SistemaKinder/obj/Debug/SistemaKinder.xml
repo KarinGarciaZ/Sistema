@@ -6,6 +6,142 @@ SistemaKinder
 </name>
 </assembly>
 <members>
+<member name="T:SistemaKinder.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources._03_icono_empleados">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources._164962">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.basurita">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.basurita1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.botones_01">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.cash_icon_icons_com_51090">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.Commissies">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.cropped_cropped_nic3b1os_lindos">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.icono_informacion_general_blanco_azul_0">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.icono_inicio">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.icoprofesor">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.images">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.index00e0">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.Inventario3">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.logo3">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.Logout_37127">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.parents_icon">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.question_634903_960_720">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.receiptofcash_cash_money_4581">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.school_295210_960_720">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.symbol_help">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.user_1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.user_2_icon">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaKinder.My.Resources.Resources.User_3_icon">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:SistemaKinder.bdKinderDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -289,142 +425,6 @@ Update Order Option
 <member name="T:SistemaKinder.bdKinderDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
-</summary>
-</member>
-<member name="T:SistemaKinder.My.Resources.Resources">
-<summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.ResourceManager">
-<summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.Culture">
-<summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources._03_icono_empleados">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources._164962">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.basurita">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.basurita1">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.botones_01">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.cash_icon_icons_com_51090">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.Commissies">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.cropped_cropped_nic3b1os_lindos">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.icono_informacion_general_blanco_azul_0">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.icono_inicio">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.icoprofesor">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.images">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.index00e0">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.Inventario3">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.logo3">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.Logout_37127">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.parents_icon">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.question_634903_960_720">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.receiptofcash_cash_money_4581">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.school_295210_960_720">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.symbol_help">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.user_1">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.user_2_icon">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:SistemaKinder.My.Resources.Resources.User_3_icon">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 </members>

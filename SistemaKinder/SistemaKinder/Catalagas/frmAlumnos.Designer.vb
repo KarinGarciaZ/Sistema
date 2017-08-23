@@ -618,9 +618,11 @@ Partial Class frmAlumnos
         '
         'cboTutor
         '
+        Me.cboTutor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cboTutor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboTutor.BackColor = System.Drawing.SystemColors.Window
         Me.cboTutor.DataSource = Me.TutoresBindingSource
         Me.cboTutor.DisplayMember = "nombre"
-        Me.cboTutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTutor.Enabled = False
         Me.cboTutor.FormattingEnabled = True
         Me.cboTutor.Location = New System.Drawing.Point(76, 371)
@@ -644,9 +646,10 @@ Partial Class frmAlumnos
         '
         'cboGrupo
         '
+        Me.cboGrupo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.cboGrupo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboGrupo.DataSource = Me.GruposBindingSource
         Me.cboGrupo.DisplayMember = "generacion"
-        Me.cboGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGrupo.Enabled = False
         Me.cboGrupo.FormattingEnabled = True
         Me.cboGrupo.Location = New System.Drawing.Point(76, 398)

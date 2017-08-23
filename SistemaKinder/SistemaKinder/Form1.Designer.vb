@@ -51,6 +51,7 @@ Partial Class frmMenu
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ModificacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,6 +120,7 @@ Partial Class frmMenu
         '
         'DiscapacidadesToolStripMenuItem
         '
+        Me.DiscapacidadesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModificacionesToolStripMenuItem})
         Me.DiscapacidadesToolStripMenuItem.Image = Global.SistemaKinder.My.Resources.Resources.question_634903_960_720
         Me.DiscapacidadesToolStripMenuItem.Name = "DiscapacidadesToolStripMenuItem"
         Me.DiscapacidadesToolStripMenuItem.Size = New System.Drawing.Size(215, 30)
@@ -284,6 +286,12 @@ Partial Class frmMenu
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'ModificacionesToolStripMenuItem
+        '
+        Me.ModificacionesToolStripMenuItem.Name = "ModificacionesToolStripMenuItem"
+        Me.ModificacionesToolStripMenuItem.Size = New System.Drawing.Size(214, 30)
+        Me.ModificacionesToolStripMenuItem.Text = "Modificaciones"
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -338,4 +346,5 @@ Partial Class frmMenu
     Friend WithEvents EntradaMaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PréstamoMaterialToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PagosToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ModificacionesToolStripMenuItem As ToolStripMenuItem
 End Class

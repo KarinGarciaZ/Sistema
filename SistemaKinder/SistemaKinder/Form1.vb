@@ -89,4 +89,8 @@
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
+
+    Private Sub ModificacionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificacionesToolStripMenuItem.Click
+        frmModDiscapacidades.ShowDialog()
+    End Sub
 End Class

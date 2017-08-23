@@ -77,6 +77,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bdKinderDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Catalagas\frmModAlunmos.Designer.vb">
+      <DependentUpon>frmModAlunmos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalagas\frmModAlunmos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalagas\frmModDiscapacidades.Designer.vb">
+      <DependentUpon>frmModDiscapacidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalagas\frmModDiscapacidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulo.vb" />
     <Compile Include="Consultas\frmConsAlumnos.Designer.vb">
       <DependentUpon>frmConsAlumnos.vb</DependentUpon>
@@ -228,6 +240,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Catalagas\frmModAlunmos.resx">
+      <DependentUpon>frmModAlunmos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalagas\frmModDiscapacidades.resx">
+      <DependentUpon>frmModDiscapacidades.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\frmConsAlumnos.resx">
       <DependentUpon>frmConsAlumnos.vb</DependentUpon>
     </EmbeddedResource>

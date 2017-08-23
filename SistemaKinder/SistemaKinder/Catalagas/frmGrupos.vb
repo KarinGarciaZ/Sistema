@@ -79,7 +79,25 @@ Public Class frmGrupos
 
     Private Sub frmGrupos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Empleados' Puede moverla o quitarla según sea necesario.
-        Me.EmpleadosTableAdapter.Fill(Me.BdKinderDataSet.Empleados)
+        Me.EmpleadosTableAdapter.FillBy(Me.BdKinderDataSet.Empleados)
         conexionsql.Open()
+    End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByToolStripButton.Click
+        Try
+            Me.EmpleadosTableAdapter.FillBy(Me.BdKinderDataSet.Empleados)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub FillByToolStripButton1_Click(sender As Object, e As EventArgs) Handles FillByToolStripButton1.Click
+        Try
+            Me.EmpleadosTableAdapter.FillBy(Me.BdKinderDataSet.Empleados)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class
