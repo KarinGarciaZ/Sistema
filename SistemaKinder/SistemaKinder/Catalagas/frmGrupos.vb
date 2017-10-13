@@ -78,8 +78,8 @@ Public Class frmGrupos
     End Sub
 
     Private Sub frmGrupos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        conexionsql.Open()
         'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Empleados' Puede moverla o quitarla según sea necesario.
         Me.EmpleadosTableAdapter.Fill(Me.BdKinderDataSet.Empleados)
-        conexionsql.Open()
     End Sub
 End Class
