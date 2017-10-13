@@ -44,6 +44,7 @@ Public Class frmAlumnos
     End Sub
 
     Private Sub frmAlumnos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+<<<<<<< HEAD
 
         'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Discapacidades' Puede moverla o quitarla según sea necesario.
         Me.DiscapacidadesTableAdapter.Fill(Me.BdKinderDataSet.Discapacidades)
@@ -53,6 +54,15 @@ Public Class frmAlumnos
         conexionsql.Open()
 
 
+=======
+        conexionsql.Open()
+        'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Grupos' Puede moverla o quitarla según sea necesario.
+        Me.GruposTableAdapter.Fill(Me.BdKinderDataSet.Grupos)
+        'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Tutores' Puede moverla o quitarla según sea necesario.
+        Me.TutoresTableAdapter.Fill(Me.BdKinderDataSet.Tutores)
+        'TODO: esta línea de código carga datos en la tabla 'BdKinderDataSet.Discapacidades' Puede moverla o quitarla según sea necesario.
+        Me.DiscapacidadesTableAdapter.Fill(Me.BdKinderDataSet.Discapacidades)
+>>>>>>> Develop
     End Sub
 
     Private Sub cmdSalir_Click(sender As Object, e As EventArgs) Handles cmdSalir.Click
@@ -241,7 +251,6 @@ Public Class frmAlumnos
 
     Private Sub cboTutor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTutor.SelectedIndexChanged
         If conexionsql.State = ConnectionState.Open Then
-
             comando.CommandText = "SELECT parentesco FROM Tutores WHERE idTutor = " & cboTutor.SelectedValue
             lector = comando.ExecuteReader
             lector.Read()
